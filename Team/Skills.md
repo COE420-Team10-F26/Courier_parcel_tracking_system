@@ -25,3 +25,15 @@ Sarhan Alzaabi
 
 \- Version Control: Git and GitHub
 
+
+**Kevin Alex**
+
+* **Languages:** Python, C++, Java, Javascript, Matlab, SQL
+* **Web development:** HTML, CSS, Bootstrap 
+* **AI:**: Ollama, vLLM, Deepseek, Gemma
+* **Concepts and Paradigms:** OOP, Data Structures and Algorithms, Database systems, Operating Systems, LLMs, RAG systems, Prompt Engineering,
+Computer Networks
+* **DevOps and Tools:** Docker, Git, Gitlab, Azure Devops, Linux/Server Environments
+* **Art and Design:** Drawing Traditional/Digital
+
+

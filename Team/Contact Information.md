@@ -12,3 +12,8 @@
 * AUS Email: b00100669@aus.edu
 * Personal Email: Sarhanalzaabi19@gmail.com
 
+* Name: Kevin Alex
+* AUS ID: b00098368
+* AUS Email: b00098368@aus.edu
+* Personal Email: kevinalexkoshy@gmail.com
+
