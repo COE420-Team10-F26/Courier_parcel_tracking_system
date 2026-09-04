@@ -1,0 +1,13 @@
+# Skills
+
+**Muhammad Hammad Khan**
+* **Programming:** C++, Java, Python, JavaScript, SQL
+* **Object-Oriented Programming:** C++ OOP, including templates, operator overloading, and friend functions
+* **Data Structures & Algorithms:** Stacks, queues, linked lists, trees (BST, AVL), map, set, graphs & DFS/BFS traversals, hash tables, sorting algorithms, and algorithm analysis
+* **Software Development:** GUI development, web development, database design, relational schemas, and software testing
+* **Database Development:** SQL, relational database design, and integration of databases with Java applications
+* **Web Development:** HTML, CSS, and JavaScript
+* **Version Control:** Git and GitHub
+* **Systems & Low-Level Programming:** Basic assembly language, registers, functions, stack operations, and memory concepts
+* **Development Tools:** Ghidra and Dear ImGui
+* **Design & Media:** Canva and basic video editing
