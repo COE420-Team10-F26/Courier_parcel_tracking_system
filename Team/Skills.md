@@ -37,3 +37,13 @@ Computer Networks
 * **Art and Design:** Drawing Traditional/Digital
 
 
+
+**Ahmed EL Sabagh**
+
+* **Languages:** Python, C++, Java, Javascript, Matlab, SQL
+* **Web development:** HTML, CSS, 
+* **Concepts and Paradigms:** OOP, Data Structures and Algorithms,Prompt Engineering,
+Computer Networks, Design and Algorithms Analysis 
+* **DevOps and Tools:** Git, matlab, eclipse, GitHub
+* **Art and Design:** Drawing Traditional/Digital
+
