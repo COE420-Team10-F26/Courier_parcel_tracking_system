@@ -14,7 +14,7 @@
 
 | **Relationship ID** | **Base Use Case** | **Related Use Case** | **Relationship** | **Justification** |
 | --- | --- | --- | --- | --- |
-| R-01 | UC-03 Book Parcel | UC-02 Log In | <<include>> | A customer can only book a parcel after logging in. |
-| R-02 (draft) | UC-03 Book Parcel | UC-04 Generate Tracking Number | <<include>> | Every confirmed booking gets a tracking number, so this always happens as part of booking. Wording still rough. |
-| R-03 (draft) | UC-05 Track Parcel | UC-02 Log In | <<include>> | Tracking is only available to logged-in customers. Wording still rough. |
+| R-01 | UC-03 Book Parcel | UC-02 Log In | `<<include>>` | A customer can only book a parcel after logging in. |
+| R-02 (draft) | UC-03 Book Parcel | UC-04 Generate Tracking Number | `<<include>>` | Every confirmed booking gets a tracking number, so this always happens as part of booking. Wording still rough. |
+| R-03 (draft) | UC-05 Track Parcel | UC-02 Log In | `<<include>>` | Tracking is only available to logged-in customers. Wording still rough. |
 
