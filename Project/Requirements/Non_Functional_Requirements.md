@@ -4,11 +4,11 @@
 
 | **NFR ID** | **Category** | **Non-Functional Requirement** | **Contributor** |
 | --- | --- | --- | --- |
-| NFR-01 | Performance | The tracking page shall show the current status within 2 seconds for at least 95% of requests. | Sarhan (b00100669) |
-| NFR-02 | Performance | The login process shall finish within 3 seconds for at least 95% of login attempts. | Sarhan (b00100669) |
-| NFR-03 (draft) | Usability | Registration and booking should be quick for a first-time user. Need to pin down a measurable time and how it's tested. | Sarhan (b00100669) |
-| NFR-04 (draft) | Usability | Form errors shown clearly next to the field. Need to word this so it's verifiable. | Sarhan (b00100669) |
-| NFR-05 (draft) | Reliability | If the system loses connection during a booking or status update, no partial or duplicate record should be saved. Still need to phrase this as something measurable/testable. | Sarhan (b00100669) |
+| NFR-01 | Performance | The tracking page shall show the current status and status history within 2 seconds for at least 95% of requests when up to 50 users are using the system at the same time. | Sarhan (b00100669) |
+| NFR-02 | Performance | The login process shall finish within 3 seconds for at least 95% of login attempts when up to 50 users are using the system at the same time. | Sarhan (b00100669) |
+| NFR-03 | Usability | A first-time customer shall be able to register and book a parcel in under 5 minutes without any instructions, verified by a test with at least 5 people who have not used the system before. | Sarhan (b00100669) |
+| NFR-04 | Usability | Errors on the registration and booking forms shall be shown next to the field that has the problem, in plain words that say what to fix, and the other data already typed shall be kept. This shall be verified by submitting each form with invalid data. | Sarhan (b00100669) |
+| NFR-05 | Reliability | If the connection is lost while a customer is submitting a booking or the system is updating a parcel's status, the system shall not save a partial or duplicate record, verified by disconnecting the network mid-submission during testing. | Sarhan (b00100669) |
 
 ### Student 2 Contributions
 | **NFR ID** | **Category** | **Non-Functional Requirement** | **Contributor** |

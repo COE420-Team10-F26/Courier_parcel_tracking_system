@@ -5,20 +5,20 @@
 | **UC ID** | **Use Case Name** | **Primary Actor** | **Short Description** | **Contributor** |
 | --- | --- | --- | --- | --- |
 | UC-01 | Register Account | Customer | A new customer creates an account by entering name, email, phone number and password. | Sarhan (b00100669) |
-| UC-02 | Log In | Customer | A registered user logs in and is taken to the dashboard for their role. | Sarhan (b00100669) |
-| UC-03 | Book Parcel | Customer | A logged-in customer books a parcel by entering recipient and parcel details. | Sarhan (b00100669) |
-| UC-04 (draft) | Generate Tracking Number | Customer | Tied to booking, needs its own short description still. | Sarhan (b00100669) |
-| UC-05 (draft) | Track Parcel | Customer | Customer looks up parcel status, description still rough. | Sarhan (b00100669) |
+| UC-02 | Log In | Customer | A registered user enters email and password to access the system and is taken to the dashboard for their role. | Sarhan (b00100669) |
+| UC-03 | Book Parcel | Customer | A logged-in customer enters the recipient and parcel details to book a parcel for delivery. | Sarhan (b00100669) |
+| UC-04 | Generate Tracking Number | Customer | When a booking is confirmed, the system creates a unique tracking number and shows it to the customer. | Sarhan (b00100669) |
+| UC-05 | Track Parcel | Customer | A logged-in customer enters a tracking number to see the parcel's current status and status history. | Sarhan (b00100669) |
 
-### Use Case Relationships (Student 1, so far)
+### Use Case Relationships (Student 1)
 
 | **Relationship ID** | **Base Use Case** | **Related Use Case** | **Relationship** | **Justification** |
 | --- | --- | --- | --- | --- |
-| R-01 | UC-03 Book Parcel | UC-02 Log In | `<<include>>` | A customer can only book a parcel after logging in. |
-| R-02 (draft) | UC-03 Book Parcel | UC-04 Generate Tracking Number | `<<include>>` | Every confirmed booking gets a tracking number, so this always happens as part of booking. Wording still rough. |
-| R-03 (draft) | UC-05 Track Parcel | UC-02 Log In | `<<include>>` | Tracking is only available to logged-in customers. Wording still rough. |
+| R-01 | UC-03 Book Parcel | UC-02 Log In | `<<include>>` | A customer can only book a parcel after logging in, so booking always needs the login use case. |
+| R-02 | UC-03 Book Parcel | UC-04 Generate Tracking Number | `<<include>>` | Every confirmed booking always gets a tracking number, so generating one is always part of booking. |
+| R-03 | UC-05 Track Parcel | UC-02 Log In | `<<include>>` | Tracking is only available to logged-in customers, so it always needs the login use case. |
 
-
+Note: no `<<extend>>` relationships in this area since none of these use cases have optional or conditional extra behavior.
 
 ### Student 2 Contributions (Kevin)
 

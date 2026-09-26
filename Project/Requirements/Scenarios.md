@@ -4,8 +4,8 @@
 
 | **Scenario ID** | **Scenario Title** | **Actor/Stakeholder** | **Scenario Description** |
 | --- | --- | --- | --- |
-| S-01 | Customer registers and books a parcel | Customer (Abdulla Qayed Al Ahli) | Abdulla registers with his name, email and phone number. He logs in and books a parcel to Omar Khalid in Abu Dhabi, entering the parcel's weight, size and description. The system confirms the booking and gives him a tracking number. |
-| S-02 (draft) | Customer tracks a parcel | Customer | Customer enters a tracking number and sees the parcel's status. Still need to work out the wrong-tracking-number case and the exact status history wording. |
+| S-01 | Customer registers and books a parcel | Customer (Abdulla Qayed Al Ahli) | Abdulla registers with his name, email and phone number. He logs in and books a parcel to Omar Khalid in Abu Dhabi, entering the parcel's weight, size and description. The system confirms the booking and gives him a tracking number, for example CPT-000123. |
+| S-02 | Customer tracks a booked parcel | Customer (Abdulla Qayed Al Ahli) | The next day Abdulla goes to the tracking page and types the tracking number wrongly as CPT-000132. The system tells him no parcel was found with that number. He corrects it to CPT-000123 and sees the current status "Picked Up" along with the earlier status "Booked". Later that day he checks again and sees the status "Out for Delivery". |
 
 ### Student 2 Contributions (Kevin)
 | **Scenario ID** | **Scenario Title** | **Actor/Stakeholder** | **Scenario Description** |
