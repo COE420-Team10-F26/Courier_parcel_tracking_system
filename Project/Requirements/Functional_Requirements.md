@@ -19,3 +19,14 @@
 | FR-03 | The system must display, on the admin dashboard, a list of all parcels along with their current status and assigned field staff member. | S01, Admin | Kevin (b00098368)|
 | FR-04 | The system must allow an admin to select multiple parcels with status "Pending Pickup" and assign them to a single field staff member in one action. The system must change each selected parcel's status to "Assigned" and send the field staff member one notification listing the number of parcels added. | S01, Admin | Kevin (b00098368)|
 | FR-05 | The system must allow an admin to create a field staff or admin account by entering the user's name, email, and role. The system must generate a temporary password and require the user to change it at first login. | Admin | Kevin (b00098368)|
+
+
+### Student 3 Contribution (Hammad - b00094579)
+
+| **FR ID** | **Functional Requirement** | **Source Scenario/Stakeholder** | **Contributor** |
+| --- | --- | --- | --- |
+| FR-01 | The system should allow field staff member to view a list of parcels assigned to them for pickup, including senders address and parcel details | Field staff | Muhammad Hammad Khan (b00094579) |
+| FR-02 | The system should allow a field staff member to view a list of parcels assigned to them for delivery including recipient address and parcel details. | Field staff | Muhammad Hammad Khan (b00094579) |
+| FR-03 | The system should allow field staff to update the parcel delivery status (dispatched/out for delivery, in shipment etc) from their assigned task list. | Field staff | Muhammad Hammad Khan (b00094579) |
+| FR-04 | The system should allow a field staff member to confirm pick up for parcel from the sender and system should be able to record the pickup time. | Field staff | Muhammad Hammad Khan (b00094579) |
+| FR-05 | The system shall require a field staff member to capture proof of delivery for example recipient’s name and signature, may be even national id before system mark the parcel delivery complete | Field staff | Muhammad Hammad Khan (b00094579) |

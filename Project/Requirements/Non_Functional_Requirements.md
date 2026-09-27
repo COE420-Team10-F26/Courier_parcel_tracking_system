@@ -18,3 +18,14 @@
 | NFR-03 | Maintainability | All code changes shall be made on a feature branch and merged into the main branch only after review by at least one other team member. Each merge shall have a meaningful commit message. | Kevin (b00098368)|
 | NFR-04 | Security | The system shall lock a user account for 15 minutes after 4 consecutive failed login attempts and shall show the same generic error message ("Invalid email or password") for a wrong email and a wrong password. | Kevin (b00098368)|
 | NFR-05 | Maintainability | The system shall write every unhandled error to an error log with a timestamp, the affected function, and the error message, so that a developer can locate the failing function from the log entry. | Kevin (b00098368)|
+
+
+### Student 3 Contribution (Hammad - b00094579)
+
+| **NFR ID** | **Category** | **Non-Functional Requirement** | **Contributor** |
+| --- | --- | --- | --- |
+| NFR-01 | Reliability | If a field staff member loses network connection after submitting a status update, the app should queue the update locally and try to do it after 30 sec of reconnecting with no data loss. | Muhammad Hammad Khan (b00094579) |
+| NFR-02 | Reliability | Proof of delivery photo must be stored locally in the device and if upload fails, it should try 3 times to upload the proof again. | Muhammad Hammad Khan (b00094579) |
+| NFR-03 | Reliability | A status update submitted by the field staff should reflect in customer and admin views within 5 sec under normal network conditions. | Muhammad Hammad Khan (b00094579) |
+| NFR-04 | Portability | The field staff interface **must** function properly on both android and IOS without any loss of its core functionalities. | Muhammad Hammad Khan (b00094579) |
+| NFR-05 | Portability | The field staff interface should render correctly on both, mobiles and tablets (may be even on like laptop or desktop) without any loss of usability. | Muhammad Hammad Khan (b00094579) |

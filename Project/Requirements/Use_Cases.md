@@ -41,3 +41,21 @@ Note: no `<<extend>>` relationships in this area since none of these use cases h
 | R-03 | Log In | UC-05 Change Temporary Password | `<<extend>>` | It only happens conditionally, when the account is on a temporary password at first login. |
 | R-04 | UC-04 Assign Parcels to Field Staff | Notify Field Staff | `<<include>>` | FR-04 requires that every assignment sends the field staff member one notification listing how many parcels were added. It always happens, so it's part of the base behaviour. |
 
+
+### Student 3 Contribution (Hammad - b00094579)
+
+| **UC ID** | **Use Case Name** | **Primary Actor** | **Short Description** | **Contributor** |
+| --- | --- | --- | --- | --- |
+| UC-01 | View Assigned Pickups | Field Staff | Field staff seeing the list of parcels they need to collect with senders details | Muhammad Hammad Khan (b00094579) |
+| UC-02 | View Assigned Deliveries | Field Staff | Field staff views the list of parcels they need to deliver with recipient details | Muhammad Hammad Khan (b00094579) |
+| UC-03 | Update Parcel Status | Field Staff | Field staff change parcel status as it moves through differ status like pick up and delivery etc | Muhammad Hammad Khan (b00094579) |
+| UC-04 | Confirm pickup | Field Staff | Field staff confirms that the parcel has been collected from the sender. | Muhammad Hammad Khan (b00094579) |
+| UC-05 | Record Proof of delivery | Field Staff | Field staff captures recipents confirmation (could be eid, signatures etc) when parcel is delivered. | Muhammad Hammad Khan (b00094579) |
+
+## Use Case Relationships (Student 3)
+
+| **Relationship ID** | **Base Use Case** | **Related Use Case** | **Relationship** | **Justification** |
+| --- | --- | --- | --- | --- |
+| R-01 | Confirm pickup | Update parcel status | `<<include>>` | Confirming a parcel pickup always set the parcel status to picked up so it cant be completed without invoking update parcel status. |
+| R-02 | Record proof of delivery | Update parcel status | `<<include>>` | Recording proof of delivery always set the parcel status to delivered so it always invokes update parcel status. |
+
