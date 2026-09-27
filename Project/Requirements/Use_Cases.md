@@ -29,6 +29,8 @@ Note: no `<<extend>>` relationships in this area since none of these use cases h
 | UC-03 | View All Parcels on Dashboard | Admin | The admin views all parcels on the dashboard with each parcel's current status and assigned field staff member. | Kevin (b00098368)|
 | UC-04 | Assign Parcels to Field Staff | Admin | The admin selects one or more "Pending Pickup" parcels and assigns them to a single field staff member. Parcel statuses change to "Assigned" and the field staff member is notified. | Kevin (b00098368)|
 | UC-05 | Create Staff/Admin Account | Admin | The admin creates a field staff or admin account by entering name, email, and role. The system generates a temporary password that must be changed at first login. | Kevin (b00098368)|
+| UC-06 | Change Temporary Password | Field Staff / Admin | On first login with a system-generated temporary password, the user is required to set a new permanent password before the system lets them proceed to their dashboard. | Kevin (b00098368)|
+
 
 ### Use Case Relationships (Student 2)
 
