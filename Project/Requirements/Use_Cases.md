@@ -34,9 +34,8 @@ Note: no `<<extend>>` relationships in this area since none of these use cases h
 
 | **Relationship ID** | **Base Use Case** | **Related Use Case** | **Relationship** | **Justification** |
 | --- | --- | --- | --- | --- |
-| R-01 | UC-01 View and Search User Accounts | Search/Filter Users (part of UC-01) | `<<extend>>` | Searching and filtering are optional; the admin can just browse the full list. |
-| R-02 | UC-02 Deactivate/Reactivate User Account | UC-01 View and Search User Accounts | `<<include>>` | The admin must locate and select a user from the list before changing their status. |
-| R-03 | UC-04 Assign Parcels to Field Staff | UC-03 View All Parcels on Dashboard | `<<include>>` | Assignment always starts from the parcel list, since the admin picks "Pending Pickup" parcels from it |
-| R-04 | Log In | UC-05 Change Temporary Password | `<<extend>>` | It only happens conditionally, when the account is on a temporary password at first login. |
-| R-05 | UC-04 Assign Parcels to Field Staff | Notify Field Staff | `<<include>>` | FR-04 requires that every assignment sends the field staff member one notification listing how many parcels were added. It always happens, so it's part of the base behaviour. |
+| R-01 | UC-02 Deactivate/Reactivate User Account | UC-01 View and Search User Accounts | `<<include>>` | The admin must locate and select a user from the list before changing their status. |
+| R-02 | UC-04 Assign Parcels to Field Staff | UC-03 View All Parcels on Dashboard | `<<include>>` | Assignment always starts from the parcel list, since the admin picks "Pending Pickup" parcels from it |
+| R-03 | Log In | UC-05 Change Temporary Password | `<<extend>>` | It only happens conditionally, when the account is on a temporary password at first login. |
+| R-04 | UC-04 Assign Parcels to Field Staff | Notify Field Staff | `<<include>>` | FR-04 requires that every assignment sends the field staff member one notification listing how many parcels were added. It always happens, so it's part of the base behaviour. |
 
