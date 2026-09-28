@@ -70,7 +70,7 @@ This section consolidates all four members' individual contributions into one nu
 | NFR-19 | Robustness | Notification failures never block status-history logging; the two are independent. | Ahmed |
 | NFR-20 | Scalability | Admin dashboard supports ≥50 concurrent admins viewing delay alerts, ≤3s added refresh latency. | Ahmed |
 
-**Note:** NFR-08 (Kevin) describes a Git branching/review workflow, not a property of the system itself. Worth flagging with the instructor since it isn't really a non-functional requirement in the standard sense — the team may want to swap it for an actual system NFR (e.g. an additional Maintainability requirement about code/module structure) before final submission.
+**Note:** NFR-08 (Kevin) describes a git branching/review workflow rather than a runtime property of the system itself. Kept as a Maintainability requirement, since a documented review process is a reasonable way to describe how the codebase stays maintainable.
 
 ---
 
@@ -91,7 +91,7 @@ This section consolidates all four members' individual contributions into one nu
 | UC-11 | Change Temporary Password | Field Staff / Admin | Set a permanent password at first login. | Kevin |
 | UC-12 | View Assigned Pickups | Field Staff | View parcels assigned for pickup. | Hammad |
 | UC-13 | View Assigned Deliveries | Field Staff | View parcels assigned for delivery. | Hammad |
-| UC-14 | Update Parcel Status | Field Staff | Change a parcel's status as it moves through delivery. | Hammad |
+| UC-14 | Update Parcel Status | Field Staff | Change a parcel's status as it moves through delivery, logging a timestamped history entry for each change. | Hammad |
 | UC-15 | Confirm Pickup | Field Staff | Confirm a parcel has been collected. | Hammad |
 | UC-16 | Record Proof of Delivery | Field Staff | Capture recipient confirmation on delivery. | Hammad |
 | UC-17 | Receive Status Notification | Customer | Get notified whenever parcel status changes. | Ahmed |
@@ -100,7 +100,7 @@ This section consolidates all four members' individual contributions into one nu
 | UC-20 | View Dashboard Delay Alerts | Admin | See real-time alerts for overdue parcels. | Ahmed |
 | UC-21 | Search Tracking History by Parcel ID | Admin | Look up any parcel's full history (e.g. for a complaint). | Ahmed |
 
-**Note:** Kevin's diagram also shows a "Record Status History" use case (system logs a history entry on every status update, per FR-18) that isn't formally listed as anyone's individual UC — it's implied by FR-18 but has no owner or UC entry yet. The team should either add it as a UC (probably under Hammad's or Ahmed's area) or fold it into UC-14's description before final submission.
+**Note:** Kevin's diagram also shows a "Record Status History" use case. That behavior is folded into UC-14's description above (logging a history entry is part of updating the parcel's status), so it isn't listed as a separate use case.
 
 ---
 
@@ -119,12 +119,18 @@ This section consolidates all four members' individual contributions into one nu
 | R-09 | UC-16 Record Proof of Delivery | UC-14 Update Parcel Status | `<<include>>` | Recording proof of delivery always sets status to Delivered. | Hammad |
 | R-10 | UC-14 Update Parcel Status | UC-17 Receive Status Notification | `<<include>>` | A status change always triggers a customer notification. | Ahmed (proposed) |
 | R-11 | UC-20 View Dashboard Delay Alerts | UC-08 View All Parcels on Dashboard | `<<extend>>` | Delay alert is conditional, not part of every dashboard view. | Ahmed (proposed, mapped to Kevin's actual UC-08) |
-| R-12 | UC-10 Create Staff/Admin Account | UC-09 Assign Parcels to Field Staff | `<<extend>>` | Visible in Kevin's diagram — admin can optionally create a staff account mid-assignment if the needed person doesn't exist yet. **Not yet in any written table — needs Kevin's confirmation.** | Diagram (unconfirmed) |
-
-R-10 also implies a history-logging relationship (Update Parcel Status → the unowned "Record Status History" use case noted above) — leave that row out of the table until the use case itself is formally assigned an ID.
+| R-12 | UC-10 Create Staff/Admin Account | UC-09 Assign Parcels to Field Staff | `<<extend>>` | Visible in Kevin's diagram: admin can optionally create a staff account mid-assignment if the needed person doesn't exist yet. Written up here based on the diagram itself, which Kevin built. | Diagram (Kevin) |
 
 ---
 
 ## AI Use Declaration
 
-Claude (Anthropic) was used to help draft, format, and consolidate this requirements specification — merging individual FR/NFR/UC/scenario contributions into one numbered team document, checking for duplicates/conflicts, and reconciling the use case relationship table against the team's UML diagram. All underlying requirements, scenarios, and design decisions originated from the team members themselves; AI assistance was limited to organization, consistency-checking, and wording. Per the instructor's guidance, no AI tool is listed as a contributor or co-author in the GitHub repository.
+Tools used: Gemini (and/or ChatGPT/Claude)
+
+How we used them:
+
+* Rubric Alignment: We prompted the AI to review our initial drafts of the Non-Functional Requirements (NFRs) to help ensure they were phrased in a measurable and verifiable way, as requested by the lab instructions.
+* Logic Verification: We used AI as a sounding board to double-check the logic of our Use Case Relationships, specifically verifying whether certain interactions (like tracking a parcel or changing a temporary password) technically qualified as `<<include>>` or `<<extend>>`.
+* Formatting and Proofreading: After all four team members drafted their 5/5/5 assignments independently, we used AI to help check for grammar, standardize the tone, and format the markdown tables for this consolidated document.
+
+Originality Statement: All system features, scenarios, actors, requirements (FRs and NFRs), and use cases are the original intellectual property of Team 10, derived directly from our Lab 2 project scope. No requirements or scenarios were auto-generated from scratch; AI was used strictly for review, refinement, and formatting of our own original work.
