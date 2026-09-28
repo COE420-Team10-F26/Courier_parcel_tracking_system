@@ -29,3 +29,13 @@
 | NFR-03 | Reliability | A status update submitted by the field staff should reflect in customer and admin views within 5 sec under normal network conditions. | Muhammad Hammad Khan (b00094579) |
 | NFR-04 | Portability | The field staff interface **must** function properly on both android and IOS without any loss of its core functionalities. | Muhammad Hammad Khan (b00094579) |
 | NFR-05 | Portability | The field staff interface should render correctly on both, mobiles and tablets (may be even on like laptop or desktop) without any loss of usability. | Muhammad Hammad Khan (b00094579) |
+
+### Student 4 Contribution (Ahmed El Sabagh - b00095506)
+
+| **NFR ID** | **Category** | **Non-Functional Requirement** | **Contributor** |
+| --- | --- | --- | --- |
+| NFR-01 | Scalability | The notification service shall support up to 10,000 status-change notifications per hour with a queuing delay of no more than 2 minutes. | Ahmed (b00095506) |
+| NFR-02 | Scalability | The tracking-history store shall support at least 1,000,000 parcel history records without the tracking page's load time exceeding 2 seconds. | Ahmed (b00095506) |
+| NFR-03 | Robustness | If an outbound notification channel is temporarily unavailable, the system shall queue the notification and retry for up to 24 hours before marking it failed. | Ahmed (b00095506) |
+| NFR-04 | Robustness | A failure in the notification-sending component shall not prevent a status-history entry from being recorded; the two shall be independent. | Ahmed (b00095506) |
+| NFR-05 | Scalability | The administrator dashboard shall support at least 50 concurrent administrators viewing live delay alerts with no more than a 3-second increase in refresh latency. | Ahmed (b00095506) |

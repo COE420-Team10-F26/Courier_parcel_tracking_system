@@ -30,3 +30,13 @@
 | FR-03 | The system should allow field staff to update the parcel delivery status (dispatched/out for delivery, in shipment etc) from their assigned task list. | Field staff | Muhammad Hammad Khan (b00094579) |
 | FR-04 | The system should allow a field staff member to confirm pick up for parcel from the sender and system should be able to record the pickup time. | Field staff | Muhammad Hammad Khan (b00094579) |
 | FR-05 | The system shall require a field staff member to capture proof of delivery for example recipient’s name and signature, may be even national id before system mark the parcel delivery complete | Field staff | Muhammad Hammad Khan (b00094579) |
+
+### Student 4 Contribution (Ahmed El Sabagh - b00095506)
+
+| **FR ID** | **Functional Requirement** | **Source Scenario/Stakeholder** | **Contributor** |
+| --- | --- | --- | --- |
+| FR-01 | The system shall automatically send a notification to the customer whenever their parcel's status changes. | S-01, Customer | Ahmed (b00095506) |
+| FR-02 | The system shall automatically send a notification to the assigned field staff member when a new pickup or delivery task is assigned to them. | S-01, Field Staff | Ahmed (b00095506) |
+| FR-03 | The system shall record a timestamped status-history entry (status, timestamp, responsible actor/location) for a parcel every time its status changes. | S-01, Customer/Field Staff | Ahmed (b00095506) |
+| FR-04 | The system shall allow a customer to view the complete chronological status history of a parcel by entering its tracking number. | S-01, Customer | Ahmed (b00095506) |
+| FR-05 | The system shall display a real-time alert on the administrator dashboard when a parcel remains undelivered beyond its expected delivery window. | S-01, Administrator | Ahmed (b00095506) |

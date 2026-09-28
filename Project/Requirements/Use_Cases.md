@@ -59,3 +59,21 @@ Note: no `<<extend>>` relationships in this area since none of these use cases h
 | R-01 | Confirm pickup | Update parcel status | `<<include>>` | Confirming a parcel pickup always set the parcel status to picked up so it cant be completed without invoking update parcel status. |
 | R-02 | Record proof of delivery | Update parcel status | `<<include>>` | Recording proof of delivery always set the parcel status to delivered so it always invokes update parcel status. |
 
+### Student 4 Contribution (Ahmed El Sabagh - b00095506)
+
+| **UC ID** | **Use Case Name** | **Primary Actor** | **Short Description** | **Contributor** |
+| --- | --- | --- | --- | --- |
+| UC-01 | Receive Status Notification | Customer | Customer automatically receives a notification whenever their parcel's status changes. | Ahmed (b00095506) |
+| UC-02 | Receive Assignment Notification | Field Staff | Field staff member automatically receives a notification when assigned a new task. | Ahmed (b00095506) |
+| UC-03 | View Parcel Tracking History | Customer | Customer views the full, timestamped status history of a parcel using its tracking number. | Ahmed (b00095506) |
+| UC-04 | View Dashboard Delay Alerts | Administrator | Administrator views real-time alerts for parcels delayed beyond the expected window. | Ahmed (b00095506) |
+| UC-05 | Search Tracking History by Parcel ID | Administrator | Administrator looks up the full status history of any parcel, e.g. to investigate a complaint. | Ahmed (b00095506) |
+
+### Use Case Relationships (Student 4)
+
+| **Relationship ID** | **Base Use Case** | **Related Use Case** | **Relationship** | **Justification** |
+| --- | --- | --- | --- | --- |
+| R-01 | UC-03 View Parcel Tracking History | Update Parcel Status (Student 3 area) | `<<include>>` | Every status update always appends a history entry that the customer can then view. |
+| R-02 | UC-01 Receive Status Notification | Update Parcel Status (Student 3 area) | `<<include>>` | A status change always triggers a customer notification. |
+| R-03 | UC-04 View Dashboard Delay Alerts | View All Parcels on Dashboard (Student 2 area) | `<<extend>>` | The delay alert is conditional, not part of every dashboard view. |
+
