@@ -70,5 +70,5 @@ All the other flows in the Level-0 DFD (for example Status change from P4 to P5,
 
 Doing Lab 4 showed two small inconsistencies in our Lab 3 documents, so we updated them:
 
-- **Delay rule:** Lab 3 said a parcel is delayed when it goes past its expected delivery window, without saying what that window is, and one scenario used 6 hours. For Lab 4 we made it a specific rule: a parcel with no status change for 48 hours is flagged as delayed. P3 in the Core Processes Matrix and T6 in the WBS use this rule, and FR-05, UC-04, the delayed parcel scenario and the consolidated requirements were updated to match.
-- **Tracking number format:** FR-04 and P2 use the format CPT-XXXXXX, but two Lab 3 scenarios used TRK-88214 and CPT-2026-000482. They were changed to CPT-088214 and CPT-000482.
+- **Delay rule:** Lab 3 said a parcel is delayed when it goes past its expected delivery window, without saying what that window is, and one scenario used 6 hours. For Lab 4 we made it a specific rule: a parcel with no status change for 48 hours is flagged as delayed. P3 in the Core Processes Matrix and T6 in the WBS use this rule, and the delay alert requirement (Ahmed's FR-05), the View Dashboard Delay Alerts use case, the delayed parcel scenario and the consolidated requirements were updated to match.
+- **Tracking number format:** The tracking number requirement (Sarhan's FR-04) and P2 use the format CPT-XXXXXX, but two Lab 3 scenarios used TRK-88214 and CPT-2026-000482. They were changed to CPT-088214 and CPT-000482.
