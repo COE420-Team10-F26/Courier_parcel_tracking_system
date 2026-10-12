@@ -1,0 +1,13 @@
+ID,Task,Predecessors,Duration (days),Start day,Finish day,Total slack (days),Critical
+T1,Requirements finalisation,,2,1,2,0,Yes
+T2,Database Design,T1,3,3,5,0,Yes
+T3,User-Interface Design,T1,4,3,6,17,No
+T4,Authentication & Account Management,T2,6,6,11,0,Yes
+T5,Parcel Booking Module,"T2; T4",5,12,16,0,Yes
+T6,Assignment and Monitoring Module,T5,6,17,22,6,No
+T7,Status update module,T5,6,17,22,0,Yes
+T8,Tracking & notification module,T7,6,23,28,0,Yes
+T9,Implementation of Front End,"T3; T4",5,12,16,12,No
+T10,System Integration,"T6; T8; T9",4,29,32,0,Yes
+T11,Testing & bug fixes,T10,7,33,39,0,Yes
+T12,Deployment preparation & documentation,T11,3,40,42,0,Yes
