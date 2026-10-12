@@ -64,4 +64,6 @@ Note: the Lab 3 delay requirement (Ahmed FR-05) says a parcel is delayed when it
 | Time estimates are realistic and project-specific | Yes | Between 2 and 7 days per task. Bigger modules and testing get more time. |
 | Expected Times are correctly calculated | Yes | Every task has one duration estimate from the WBS, used as E in the network diagram. |
 | Network diagram reflects the WBS dependencies | Yes | Every arrow in the network diagram matches a predecessor in the WBS. |
-| ES, EF, LS, LF and Slack calculations are correct | Yes | Checked by hand and with GanttProject (see Project_Scheduling/Critical_Path.md). |
+| ES, EF, LS, LF and Slack calculations are correct | Yes | Checked by hand and with GanttProject (see ../Project_Scheduling/Critical_Path.md). |
+| Critical Path is correctly identified | Yes | T1, T2, T4, T5, T7, T8, T10, T11, T12. All have slack 0 and it is the longest path at 42 days (see ../Project_Scheduling/Critical_Path.md). |
+| The Critical Path and project duration are verified using an appropriate scheduling/project-management tool | Yes | GanttProject 3.3 shows the same critical tasks and a 42 working day schedule (see ../Project_Scheduling/Gantt_Chart/). |
