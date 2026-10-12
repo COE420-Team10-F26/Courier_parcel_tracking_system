@@ -14,7 +14,7 @@ This section consolidates all four members' individual contributions into one nu
 | S-02 | Customer tracks a booked parcel | Customer | Abdulla mistypes his tracking number, gets "not found," corrects it, and sees the status update from "Booked" to "Picked Up" to "Out for Delivery." | Sarhan |
 | S-03 | Admin assigns parcel to field staff | Admin | Amina logs in, reviews unassigned "Pending Pickup" parcels and field staff workload, and assigns a parcel to Ahmed based on his delivery zone. The system updates the status and notifies him. | Kevin |
 | S-04 | A field staff member's delivery round | Field Staff | A field staff member picks up parcels, confirms pickup (status + timestamp recorded), delivers them, captures proof of delivery, and marks one delivery as "attempted" when no one answers. | Hammad |
-| S-05 | Delayed parcel triggers alerts and history log | Customer, Field Staff, Admin | A parcel's status changes are logged and trigger customer notifications at each step; when delivery runs 6 hours late, a delay alert appears on the admin dashboard. Ahmed later reviews the full timestamped history. | Ahmed |
+| S-05 | Delayed parcel triggers alerts and history log | Customer, Field Staff, Admin | A parcel's status changes are logged and trigger customer notifications at each step; when the parcel goes 48 hours without a status update, a delay alert appears on the admin dashboard. Ahmed later reviews the full timestamped history. | Ahmed |
 
 ---
 
@@ -41,7 +41,7 @@ This section consolidates all four members' individual contributions into one nu
 | FR-17 | System notifies the assigned field staff member when a new pickup/delivery task is assigned. | S-05 | Ahmed |
 | FR-18 | System records a timestamped status-history entry (status, timestamp, actor/location) on every status change. | S-05 | Ahmed |
 | FR-19 | Customer views the complete chronological status history of a parcel by tracking number. | S-05 | Ahmed |
-| FR-20 | Admin dashboard shows a real-time alert when a parcel remains undelivered beyond its expected window. | S-05 | Ahmed |
+| FR-20 | Admin dashboard shows a real-time alert when an undelivered parcel has had no status change for 48 hours. | S-05 | Ahmed |
 
 ---
 

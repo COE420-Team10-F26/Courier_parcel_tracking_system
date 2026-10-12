@@ -66,7 +66,7 @@ Note: no `<<extend>>` relationships in this area since none of these use cases h
 | UC-01 | Receive Status Notification | Customer | Customer automatically receives a notification whenever their parcel's status changes. | Ahmed (b00095506) |
 | UC-02 | Receive Assignment Notification | Field Staff | Field staff member automatically receives a notification when assigned a new task. | Ahmed (b00095506) |
 | UC-03 | View Parcel Tracking History | Customer | Customer views the full, timestamped status history of a parcel using its tracking number. | Ahmed (b00095506) |
-| UC-04 | View Dashboard Delay Alerts | Administrator | Administrator views real-time alerts for parcels delayed beyond the expected window. | Ahmed (b00095506) |
+| UC-04 | View Dashboard Delay Alerts | Administrator | Administrator views real-time alerts for parcels flagged as delayed (no status change for 48 hours). | Ahmed (b00095506) |
 | UC-05 | Search Tracking History by Parcel ID | Administrator | Administrator looks up the full status history of any parcel, e.g. to investigate a complaint. | Ahmed (b00095506) |
 
 ### Use Case Relationships (Student 4)

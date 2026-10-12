@@ -52,8 +52,6 @@ All the other flows in the Level-0 DFD (for example Status change from P4 to P5,
 | P4 Update Parcel Status | Hammad FR-01 to FR-05; Ahmed FR-03 | View Assigned Pickups, View Assigned Deliveries, Update Parcel Status, Confirm Pickup, Record Proof of Delivery |
 | P5 Tracking and Notifications | Sarhan FR-05; Ahmed FR-01, FR-04 | Track Parcel, Receive Status Notification, View Parcel Tracking History, Search Tracking History by Parcel ID |
 
-Note: the Lab 3 delay requirement (Ahmed FR-05) says a parcel is delayed when it goes past its expected delivery window. For Lab 4 we made this a specific rule: a parcel with no status change for 48 hours is flagged as delayed. P3 in the Core Processes Matrix and T6 in the WBS both use this rule.
-
 ## Project Scheduling
 
 | Check | Result | Notes |
@@ -67,3 +65,10 @@ Note: the Lab 3 delay requirement (Ahmed FR-05) says a parcel is delayed when it
 | ES, EF, LS, LF and Slack calculations are correct | Yes | Checked by hand and with GanttProject (see ../Project_Scheduling/Critical_Path.md). |
 | Critical Path is correctly identified | Yes | T1, T2, T4, T5, T7, T8, T10, T11, T12. All have slack 0 and it is the longest path at 42 days (see ../Project_Scheduling/Critical_Path.md). |
 | The Critical Path and project duration are verified using an appropriate scheduling/project-management tool | Yes | GanttProject 3.3 shows the same critical tasks and a 42 working day schedule (see ../Project_Scheduling/Gantt_Chart/). |
+
+## Updates to Previous Labs
+
+Doing Lab 4 showed two small inconsistencies in our Lab 3 documents, so we updated them:
+
+- **Delay rule:** Lab 3 said a parcel is delayed when it goes past its expected delivery window, without saying what that window is, and one scenario used 6 hours. For Lab 4 we made it a specific rule: a parcel with no status change for 48 hours is flagged as delayed. P3 in the Core Processes Matrix and T6 in the WBS use this rule, and FR-05, UC-04, the delayed parcel scenario and the consolidated requirements were updated to match.
+- **Tracking number format:** FR-04 and P2 use the format CPT-XXXXXX, but two Lab 3 scenarios used TRK-88214 and CPT-2026-000482. They were changed to CPT-088214 and CPT-000482.

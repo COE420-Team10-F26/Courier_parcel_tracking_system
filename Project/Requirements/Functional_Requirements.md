@@ -39,4 +39,4 @@
 | FR-02 | The system shall automatically send a notification to the assigned field staff member when a new pickup or delivery task is assigned to them. | S-01, Field Staff | Ahmed (b00095506) |
 | FR-03 | The system shall record a timestamped status-history entry (status, timestamp, responsible actor/location) for a parcel every time its status changes. | S-01, Customer/Field Staff | Ahmed (b00095506) |
 | FR-04 | The system shall allow a customer to view the complete chronological status history of a parcel by entering its tracking number. | S-01, Customer | Ahmed (b00095506) |
-| FR-05 | The system shall display a real-time alert on the administrator dashboard when a parcel remains undelivered beyond its expected delivery window. | S-01, Administrator | Ahmed (b00095506) |
+| FR-05 | The system shall display a real-time alert on the administrator dashboard when a parcel that has not been delivered has had no status change for 48 hours. | S-01, Administrator | Ahmed (b00095506) |
