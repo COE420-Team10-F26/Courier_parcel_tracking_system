@@ -5,18 +5,16 @@
 | **UC ID** | **Use Case Name** | **Primary Actor** | **Short Description** | **Contributor** |
 | --- | --- | --- | --- | --- |
 | UC-01 | Register Account | Customer | A new customer creates an account by entering name, email, phone number and password. | Sarhan (b00100669) |
-| UC-02 | Log In | Customer | A registered user enters email and password to access the system and is taken to the dashboard for their role. | Sarhan (b00100669) |
+| UC-02 | Log In | Customer, Field Staff, Admin | A registered customer, field staff member or admin enters email and password to access the system and is taken to the dashboard for their role. | Sarhan (b00100669) |
 | UC-03 | Book Parcel | Customer | A logged-in customer enters the recipient and parcel details to book a parcel for delivery. | Sarhan (b00100669) |
 | UC-04 | Generate Tracking Number | Customer | When a booking is confirmed, the system creates a unique tracking number and shows it to the customer. | Sarhan (b00100669) |
-| UC-05 | Track Parcel | Customer | A logged-in customer enters a tracking number to see the parcel's current status and status history. | Sarhan (b00100669) |
+| UC-05 | Track Parcel | Customer | A logged-in customer enters a tracking number to see the parcel's current status and expected delivery window. | Sarhan (b00100669) |
 
 ### Use Case Relationships (Student 1)
 
 | **Relationship ID** | **Base Use Case** | **Related Use Case** | **Relationship** | **Justification** |
 | --- | --- | --- | --- | --- |
-| R-01 | UC-03 Book Parcel | UC-02 Log In | `<<include>>` | A customer can only book a parcel after logging in, so booking always needs the login use case. |
-| R-02 | UC-03 Book Parcel | UC-04 Generate Tracking Number | `<<include>>` | Every confirmed booking always gets a tracking number, so generating one is always part of booking. |
-| R-03 | UC-05 Track Parcel | UC-02 Log In | `<<include>>` | Tracking is only available to logged-in customers, so it always needs the login use case. |
+| R-01 | UC-03 Book Parcel | UC-04 Generate Tracking Number | `<<include>>` | Every confirmed booking always gets a tracking number, so generating one is always part of booking. |
 
 Note: no `<<extend>>` relationships in this area since none of these use cases have optional or conditional extra behavior.
 
@@ -38,7 +36,7 @@ Note: no `<<extend>>` relationships in this area since none of these use cases h
 | --- | --- | --- | --- | --- |
 | R-01 | UC-02 Deactivate/Reactivate User Account | UC-01 View and Search User Accounts | `<<include>>` | The admin must locate and select a user from the list before changing their status. |
 | R-02 | UC-04 Assign Parcels to Field Staff | UC-03 View All Parcels on Dashboard | `<<include>>` | Assignment always starts from the parcel list, since the admin picks "Pending Pickup" parcels from it |
-| R-03 | Log In | UC-05 Change Temporary Password | `<<extend>>` | It only happens conditionally, when the account is on a temporary password at first login. |
+| R-03 | Log In (team UC-02) | UC-06 Change Temporary Password | `<<extend>>` | It only happens conditionally, when the account is on a temporary password at first login. |
 | R-04 | UC-04 Assign Parcels to Field Staff | Notify Field Staff | `<<include>>` | FR-04 requires that every assignment sends the field staff member one notification listing how many parcels were added. It always happens, so it's part of the base behaviour. |
 
 
@@ -67,13 +65,12 @@ Note: no `<<extend>>` relationships in this area since none of these use cases h
 | UC-02 | Receive Assignment Notification | Field Staff | Field staff member automatically receives a notification when assigned a new task. | Ahmed (b00095506) |
 | UC-03 | View Parcel Tracking History | Customer | Customer views the full, timestamped status history of a parcel using its tracking number. | Ahmed (b00095506) |
 | UC-04 | View Dashboard Delay Alerts | Administrator | Administrator views real-time alerts for parcels flagged as delayed (no status change for 48 hours). | Ahmed (b00095506) |
-| UC-05 | Search Tracking History by Parcel ID | Administrator | Administrator looks up the full status history of any parcel, e.g. to investigate a complaint. | Ahmed (b00095506) |
+| UC-05 | Search Tracking History by Parcel ID | Administrator | Administrator looks up the full status history of any parcel, for monitoring and audit (complaints are not submitted through the system). | Ahmed (b00095506) |
 
 ### Use Case Relationships (Student 4)
 
 | **Relationship ID** | **Base Use Case** | **Related Use Case** | **Relationship** | **Justification** |
 | --- | --- | --- | --- | --- |
-| R-01 | UC-03 View Parcel Tracking History | Update Parcel Status (Student 3 area) | `<<include>>` | Every status update always appends a history entry that the customer can then view. |
-| R-02 | UC-01 Receive Status Notification | Update Parcel Status (Student 3 area) | `<<include>>` | A status change always triggers a customer notification. |
-| R-03 | UC-04 View Dashboard Delay Alerts | View All Parcels on Dashboard (Student 2 area) | `<<extend>>` | The delay alert is conditional, not part of every dashboard view. |
+| R-01 | Update Parcel Status (Student 3 area) | UC-01 Receive Status Notification | `<<include>>` | A status change always triggers a customer notification. The history entry itself is logged as part of Update Parcel Status, not a separate use case. |
+| R-02 | UC-04 View Dashboard Delay Alerts | View All Parcels on Dashboard (Student 2 area) | `<<extend>>` | The delay alert is conditional, not part of every dashboard view. |
 
