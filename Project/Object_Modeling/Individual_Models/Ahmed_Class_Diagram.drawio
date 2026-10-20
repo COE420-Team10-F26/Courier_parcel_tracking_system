@@ -1,0 +1,73 @@
+<mxfile host="app.diagrams.net">
+  <diagram id="ahmed-classes" name="Ahmed Class Diagram">
+    <mxGraphModel dx="1700" dy="1220" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1700" pageHeight="1220" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="title" value="Ahmed El Sabagh — Notifications and Tracking History" style="text;html=1;align=center;verticalAlign=middle;fontSize=20;fontStyle=1;strokeColor=none;fillColor=none;" vertex="1" parent="1">
+          <mxGeometry x="380" y="25" width="940" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="notification" value="&lt;div style=&quot;font-weight:bold;font-style:italic;text-align:center&quot;&gt;«abstract» Notification&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left&quot;&gt;- notificationId: int&lt;br&gt;- message: String&lt;br&gt;- createdAt: DateTime&lt;br&gt;- sentAt: DateTime&lt;br&gt;- retryUntil: DateTime&lt;br&gt;- deliveryStatus: String&lt;hr&gt;+ send(): boolean&lt;br&gt;+ retry(): boolean&lt;br&gt;+ markFailed(reason: String): void&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fontSize=14;strokeWidth=2;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="560" y="110" width="490" height="270" as="geometry"/>
+        </mxCell>
+        <mxCell id="user" value="User" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=16;fontStyle=1;strokeWidth=2;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1370" y="210" width="220" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="statusNotification" value="&lt;div style=&quot;font-weight:bold;text-align:center&quot;&gt;StatusNotification&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left&quot;&gt;- previousStatus: ParcelStatus [0..1]&lt;br&gt;- currentStatus: ParcelStatus&lt;hr&gt;+ buildMessage(): String&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fontSize=14;strokeWidth=2;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="120" y="460" width="430" height="170" as="geometry"/>
+        </mxCell>
+        <mxCell id="assignmentNotification" value="&lt;div style=&quot;font-weight:bold;text-align:center&quot;&gt;AssignmentNotification&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left&quot;&gt;- parcelCount: int&lt;hr&gt;+ buildSummary(): String&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fontSize=14;strokeWidth=2;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="700" y="460" width="440" height="170" as="geometry"/>
+        </mxCell>
+        <mxCell id="parcel" value="Parcel" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=16;fontStyle=1;strokeWidth=2;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1370" y="520" width="220" height="70" as="geometry"/>
+        </mxCell>
+        <mxCell id="history" value="&lt;div style=&quot;font-weight:bold;text-align:center&quot;&gt;StatusHistoryEntry&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left&quot;&gt;- historyEntryId: int&lt;br&gt;- previousStatus: ParcelStatus [0..1]&lt;br&gt;- newStatus: ParcelStatus&lt;br&gt;- changedAt: DateTime&lt;br&gt;- location: String&lt;hr&gt;+ getTransition(): String&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fontSize=14;strokeWidth=2;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="100" y="770" width="500" height="230" as="geometry"/>
+        </mxCell>
+        <mxCell id="delayAlert" value="&lt;div style=&quot;font-weight:bold;text-align:center&quot;&gt;DelayAlert&lt;/div&gt;&lt;hr&gt;&lt;div style=&quot;text-align:left&quot;&gt;- delayAlertId: int&lt;br&gt;- detectedAt: DateTime&lt;br&gt;- isActive: boolean&lt;hr&gt;+ evaluate(parcel: Parcel, now: DateTime): boolean&lt;br&gt;+ resolve(): void&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;align=left;verticalAlign=top;spacing=8;fontSize=14;strokeWidth=2;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="1180" y="770" width="440" height="230" as="geometry"/>
+        </mxCell>
+        <mxCell id="assignment" value="Assignment" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=16;fontStyle=1;strokeWidth=2;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="850" y="1000" width="230" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="parcelStatus" value="ParcelStatus" style="rounded=0;whiteSpace=wrap;html=1;align=center;verticalAlign=middle;fontSize=16;fontStyle=1;strokeWidth=2;fillColor=#ffffff;" vertex="1" parent="1">
+          <mxGeometry x="430" y="1020" width="220" height="65" as="geometry"/>
+        </mxCell>
+        <mxCell id="noteDelivery" value="Notification delivery retries for up to 24 hours. A delivery failure must not prevent status-history logging." style="shape=note;whiteSpace=wrap;html=1;size=18;align=left;verticalAlign=middle;spacing=8;fontSize=13;strokeWidth=1;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="40" y="1100" width="690" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="noteDelay" value="Delayed means the parcel is undelivered and no status change has occurred for 48 hours." style="shape=note;whiteSpace=wrap;html=1;size=18;align=left;verticalAlign=middle;spacing=8;fontSize=13;strokeWidth=1;fillColor=#fff2cc;" vertex="1" parent="1">
+          <mxGeometry x="910" y="1100" width="650" height="90" as="geometry"/>
+        </mxCell>
+        <mxCell id="inheritStatus" value="" style="endArrow=block;endFill=0;html=1;rounded=0;strokeWidth=2;" edge="1" parent="1" source="statusNotification" target="notification">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="inheritAssignment" value="" style="endArrow=block;endFill=0;html=1;rounded=0;strokeWidth=2;" edge="1" parent="1" source="assignmentNotification" target="notification">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="recipient" value="recipient (1 User : 0..* notifications)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;startArrow=none;fontSize=12;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="notification" target="user">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="statusParcel" value="about parcel (1 Parcel : 0..* notifications)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;startArrow=none;fontSize=12;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="statusNotification" target="parcel">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="assignmentLink" value="summarizes (1 Assignment : 1 summary notification)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;startArrow=none;fontSize=12;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="assignmentNotification" target="assignment">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="historyParcel" value="history of (1 Parcel : 0..* entries)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;startArrow=none;fontSize=12;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="history" target="parcel">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="historyActor" value="actor (0..1 User; 0..* entries)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;startArrow=none;fontSize=12;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="history" target="user">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="historyStatus" value="statuses (1 new + 0..1 previous per entry; 0..* entries per value)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;startArrow=none;fontSize=12;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="history" target="parcelStatus">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+        <mxCell id="delayParcel" value="alerts on (1 Parcel : 0..* alerts over time)" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;endArrow=none;startArrow=none;fontSize=12;labelBackgroundColor=#ffffff;" edge="1" parent="1" source="delayAlert" target="parcel">
+          <mxGeometry relative="1" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
