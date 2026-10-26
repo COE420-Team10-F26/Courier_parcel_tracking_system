@@ -2,9 +2,9 @@
 
 | Class ID | Class | Purpose | Related use cases | Contributor |
 | --- | --- | --- | --- | --- |
-| C01 | Administrator | manages accounts and oversees deliveries: searches/deactivates/reactivates users, creates staff/admin accounts with a temp password, sets each staff member's zone, views all parcels and assigns Pending Pickup parcels to field staff | UC-06, UC-07, UC-08, UC-09, UC-10 | Kevin(b00098368)|
-| C02 | Assignment | one bulk assignment action: the set of Pending Pickup parcels an admin gives to one field staff member at one time (one summary notification per assignment). | UC-08, UC-09 | Kevin(b00098368) |
-| C03 | Zone | the one emirate an admin sets for a field staff member; used by the admin to match parcels to staff and see workload by area (never assigned automatically). | UC-08, UC-09, UC-10 | Kevin(b00098368) |
+| C06 | Administrator | Manages accounts and oversees deliveries: searches/deactivates/reactivates users, creates staff/admin accounts with a temp password, sets each staff member's zone, views all parcels and assigns Pending Pickup parcels to field staff. | UC-06, UC-07, UC-08, UC-09, UC-10 | Kevin Alex (b00098368)|
+| C07 | Assignment | One bulk assignment action: the set of Pending Pickup parcels an admin gives to one field staff member at one time (one summary notification per assignment). | UC-08, UC-09 | Kevin Alex (b00098368) |
+| C08 | Zone | The one emirate an admin sets for a field staff member; used by the admin to match parcels to staff and see workload by area (never assigned automatically). | UC-08, UC-09, UC-10 | Kevin Alex (b00098368) |
 
 
 ## Modeling notes

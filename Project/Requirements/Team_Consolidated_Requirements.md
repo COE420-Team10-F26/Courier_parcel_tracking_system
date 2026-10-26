@@ -24,7 +24,7 @@ This section consolidates all four members' individual contributions into one nu
 | --- | --- | --- | --- |
 | FR-01 | Register as a customer with name, email, phone number, password (min. 8 characters); reject duplicate email or empty fields. | S-01 | Sarhan |
 | FR-02 | All users (customer, field staff, admin) log in with email/password and are routed to their role's dashboard; generic error on failure. | S-01, S-02 | Sarhan |
-| FR-03 | Logged-in customer books a parcel with recipient details (full name, address, phone) and parcel details (weight > 0 and ≤ 70 kg; length, width and height each > 0 and ≤ 150 cm; description). Rejects the booking if a required field is empty, the phone is not a valid UAE number (+971 followed by 9 digits), or weight/dimensions are outside these limits. On confirmation, shows the expected delivery window: 24 hours from pickup if the recipient is in the same emirate as the sender, 48 hours if it is in a different emirate. | S-01 | Sarhan |
+| FR-03 | Logged-in customer books a parcel with the sender's pickup address and emirate, recipient details (full name, address, phone) and parcel details (weight > 0 and ≤ 70 kg; length, width and height each > 0 and ≤ 150 cm; description). Rejects the booking if a required field is empty, the phone is not a valid UAE number (+971 followed by 9 digits), or weight/dimensions are outside these limits. On confirmation, shows the expected delivery window: 24 hours from pickup if the recipient is in the same emirate as the sender, 48 hours if it is in a different emirate. | S-01 | Sarhan |
 | FR-04 | Auto-generate a unique tracking number (format CPT-XXXXXX) on booking confirmation. | S-01 | Sarhan |
 | FR-05 | Customer enters a tracking number to see the parcel's current status and expected delivery window, or "not found." The full status history is a separate function (FR-19). | S-02 | Sarhan |
 | FR-06 | Admin views all registered users (name, email, role, status), searchable/filterable. | Admin | Kevin |
@@ -98,7 +98,7 @@ These are the only parcel statuses used across the scenarios, requirements and u
 | --- | --- | --- | --- | --- |
 | UC-01 | Register Account | Customer | Create an account with name, email, phone, password. | Sarhan |
 | UC-02 | Log In | Customer, Field Staff, Admin | Any user (customer, field staff, admin) enters credentials and lands on their role's dashboard. | Sarhan |
-| UC-03 | Book Parcel | Customer | Enter recipient + parcel details to book delivery. | Sarhan |
+| UC-03 | Book Parcel | Customer | Enter pickup address, recipient + parcel details to book delivery. | Sarhan |
 | UC-04 | Generate Tracking Number | Customer | System issues a tracking number on booking confirmation. | Sarhan |
 | UC-05 | Track Parcel | Customer | Look up current status + expected delivery window by tracking number. | Sarhan |
 | UC-06 | View and Search User Accounts | Admin | View/search/filter all registered users. | Kevin |

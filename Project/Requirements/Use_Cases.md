@@ -6,7 +6,7 @@
 | --- | --- | --- | --- | --- |
 | UC-01 | Register Account | Customer | A new customer creates an account by entering name, email, phone number and password. | Sarhan (b00100669) |
 | UC-02 | Log In | Customer, Field Staff, Admin | A registered customer, field staff member or admin enters email and password to access the system and is taken to the dashboard for their role. | Sarhan (b00100669) |
-| UC-03 | Book Parcel | Customer | A logged-in customer enters the recipient and parcel details to book a parcel for delivery. | Sarhan (b00100669) |
+| UC-03 | Book Parcel | Customer | A logged-in customer enters the pickup address, recipient and parcel details to book a parcel for delivery. | Sarhan (b00100669) |
 | UC-04 | Generate Tracking Number | Customer | When a booking is confirmed, the system creates a unique tracking number and shows it to the customer. | Sarhan (b00100669) |
 | UC-05 | Track Parcel | Customer | A logged-in customer enters a tracking number to see the parcel's current status and expected delivery window. | Sarhan (b00100669) |
 
