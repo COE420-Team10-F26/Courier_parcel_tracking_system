@@ -52,7 +52,7 @@ While integrating, some small presentation fixes were made to the individual dia
 - **All:** each diagram title shows the member's name and AUS ID; reference boxes name Hammad's classes as "(Hammad)".
 - **Kevin:** added the missing 0..* multiplicity at the `Assignment` end of "given to".
 - **Hammad:** exported in high resolution without the draw.io grid, removed the leftover `recievedByName`, wrote `signature` in lowercase, and labelled `ParcelStatus` as «enumeration».
-- **Ahmed:** moved the multiplicities from inside the association labels to the line ends, attached both notes to their classes, re-laid out the lines so none overlap, and drew the `ParcelStatus` link as a «use» dependency, the same way as in the consolidated diagram.
+- **Ahmed:** moved the multiplicities from inside the association labels to the line ends, attached both notes to their classes, and re-laid out the lines so none overlap. His `statuses` association to `ParcelStatus` is kept as he designed it; it is only replaced during the merge (decision 3).
 
 ## 4. Gaps found by the consistency check and in review
 
@@ -61,7 +61,7 @@ While integrating, some small presentation fixes were made to the individual dia
 | UC-19 (tracking history) had no method returning a parcel's history | Added `Parcel.getStatusHistory(): List<StatusHistoryEntry>` |
 | UC-21 (admin looks up history by parcel ID) had no way to find a parcel by its ID | Added `Administrator.searchParcelHistory(parcelId: int): List<StatusHistoryEntry>` |
 | UC-20 (delay alerts) had no admin method to view alerts | Added `Administrator.viewDelayAlerts(): List<DelayAlert>` |
-| UC-12 / FR-11 (view pickups) needs the sender's address, but `Parcel` only had `senderEmirate` | Added `Parcel.senderAddress`, and `Customer.bookParcel()` now takes `senderAddress` and `senderEmirate`; booking collects both (see section 6) |
+| UC-12 / FR-11 (view pickups) needs the sender's address, but `Parcel` only had `senderEmirate` | Added `Parcel.senderAddress`, and `Customer.bookParcel()` now takes `senderAddress` and `senderEmirate`; booking collects both (see the updates to previous labs) |
 | Lab 4 P3 says "reassigning is allowed only before pickup", but there was no method for it | Added `Administrator.reassignParcel(parcel: Parcel, staff: FieldStaff): Assignment`. "contains" stays 0..1 on the `Assignment` side because a parcel belongs to at most one current assignment; reassigning moves it to a new one before pickup (shown in a note) |
 
 ## 5. Classes without a data store
