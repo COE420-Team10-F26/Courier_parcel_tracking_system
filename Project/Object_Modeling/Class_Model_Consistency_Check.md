@@ -22,7 +22,7 @@ Checked it against the consolidated class diagram, the Lab 3 consolidated requir
 | C16 | StatusHistoryEntry | UC-19, UC-21 | FR-18, FR-19 |
 | C17 | Notification (abstract) | UC-17, UC-18 | FR-16, FR-17 |
 | C18 | StatusNotification | UC-17 | FR-16 |
-| C19 | AssignmentNotification | UC-18 | FR-17, FR-09 |
+| C19 | AssignmentNotification | UC-18 | FR-09, FR-17 |
 | C20 | DelayAlert | UC-20 | FR-20 |
 
 Every class traces to at least one use case and FR, and UC-12 to UC-16 are covered by the merged FieldStaff class. The check found these gaps, and all were fixed in the consolidated diagram:

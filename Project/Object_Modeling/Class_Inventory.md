@@ -30,4 +30,4 @@
 - `StatusHistoryEntry` belongs to a `Parcel`; the `User` who made the change is optional for system-generated changes.
 - A parcel is delayed when it is undelivered and has had no status change for 48 hours.
 - Duplicates and conflicts found while merging, and how each was resolved, are recorded in `Integration_Notes.md`.
-- The class IDs use the team-assigned ranges: C01-C04, C06-C08, C11-C14 and C16-C20 (16 classes). Each row keeps the ID from the member's individual inventory, so it stays traceable.
+- Each member was given a block of IDs (C01-C05, C06-C10, C11-C15, C16-C20); the 16 classes use C01-C04, C06-C08, C11-C14 and C16-C20, and C05, C09, C10 and C15 were not needed. Each row keeps the ID from the member's individual inventory, so it stays traceable.

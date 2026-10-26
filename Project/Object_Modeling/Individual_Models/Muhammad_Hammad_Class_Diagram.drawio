@@ -45,7 +45,7 @@
             <mxPoint x="10" y="-10" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="oxCWz8ByhmmZToPKoJkO-11" connectable="0" parent="oxCWz8ByhmmZToPKoJkO-9" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="works in&amp;nbsp;▶" vertex="1">
+        <mxCell id="oxCWz8ByhmmZToPKoJkO-11" connectable="0" parent="oxCWz8ByhmmZToPKoJkO-9" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="works in&amp;nbsp;▼" vertex="1">
           <mxGeometry relative="1" x="-0.225" as="geometry">
             <mxPoint y="-9" as="offset" />
           </mxGeometry>
@@ -58,7 +58,7 @@
         <mxCell id="oxCWz8ByhmmZToPKoJkO-13" parent="5JeY-8wbS0U6_Itw5Bub-1" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=25;verticalAlign=top;align=left;" value="This is never set automatically, always by admin" vertex="1">
           <mxGeometry height="80" width="150" x="357" y="629" as="geometry" />
         </mxCell>
-        <mxCell id="oxCWz8ByhmmZToPKoJkO-14" parent="5JeY-8wbS0U6_Itw5Bub-1" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=25;verticalAlign=top;align=left;" value="Field staff inherits so they are not repeated in this class, like userId, fullName, email, phone etc" vertex="1">
+        <mxCell id="oxCWz8ByhmmZToPKoJkO-14" parent="5JeY-8wbS0U6_Itw5Bub-1" style="shape=note2;boundedLbl=1;whiteSpace=wrap;html=1;size=25;verticalAlign=top;align=left;" value="Inherited attributes (userId, fullName, email, phone, etc.) are not repeated here." vertex="1">
           <mxGeometry height="100" width="150" x="430" y="179" as="geometry" />
         </mxCell>
         <mxCell id="oxCWz8ByhmmZToPKoJkO-15" edge="1" parent="5JeY-8wbS0U6_Itw5Bub-1" source="oxCWz8ByhmmZToPKoJkO-0" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;endArrow=none;endFill=0;dashed=1;">
@@ -118,7 +118,7 @@
             <mxPoint x="10" y="-10" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="oxCWz8ByhmmZToPKoJkO-27" connectable="0" parent="oxCWz8ByhmmZToPKoJkO-25" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="has attempts ▶" vertex="1">
+        <mxCell id="oxCWz8ByhmmZToPKoJkO-27" connectable="0" parent="oxCWz8ByhmmZToPKoJkO-25" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="has attempts ▲" vertex="1">
           <mxGeometry relative="1" x="-0.2392" as="geometry">
             <mxPoint y="-9" as="offset" />
           </mxGeometry>
@@ -154,7 +154,7 @@
             <mxPoint x="10" y="-10" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="oxCWz8ByhmmZToPKoJkO-35" connectable="0" parent="oxCWz8ByhmmZToPKoJkO-33" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="is confirmed by ▶" vertex="1">
+        <mxCell id="oxCWz8ByhmmZToPKoJkO-35" connectable="0" parent="oxCWz8ByhmmZToPKoJkO-33" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="is confirmed by ▼" vertex="1">
           <mxGeometry relative="1" x="-0.2392" as="geometry">
             <mxPoint y="-15" as="offset" />
           </mxGeometry>
@@ -204,7 +204,7 @@
             <mxPoint x="-83" y="20" as="offset" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="oxCWz8ByhmmZToPKoJkO-43" connectable="0" parent="oxCWz8ByhmmZToPKoJkO-41" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="captures ▶" vertex="1">
+        <mxCell id="oxCWz8ByhmmZToPKoJkO-43" connectable="0" parent="oxCWz8ByhmmZToPKoJkO-41" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="captures ▼" vertex="1">
           <mxGeometry relative="1" x="-0.1829" as="geometry">
             <mxPoint y="4" as="offset" />
           </mxGeometry>
