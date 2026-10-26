@@ -25,10 +25,10 @@ Checked it against the consolidated class diagram, the Lab 3 consolidated requir
 | C19 | AssignmentNotification | UC-18 | FR-17, FR-09 |
 | C20 | DelayAlert | UC-20 | FR-20 |
 
-Every class traces to at least one use case and FR. UC-12 to UC-16 are only covered once FieldStaff is merged in, since it is still a placeholder. Three gaps:
-- UC-19 and UC-21 (tracking history) have StatusHistoryEntry but no method that returns a parcel's history. Fix: add `getHistory(): List<StatusHistoryEntry>` to Parcel.
-- UC-20 (delay alerts) has DelayAlert but no Administrator method to view alerts. Fix: add `viewDelayAlerts(): List<DelayAlert>` to Administrator.
-- UC-12 / FR-11 (view pickups) needs the sender's address, but Parcel only has `senderEmirate`, and neither registration nor booking (FR-01, FR-03) collects a sender address. Fix: add `pickupAddress: String` to Parcel and have booking collect it, or add an address to Customer.
+Every class traces to at least one use case and FR. UC-12 to UC-16 are only covered once FieldStaff is merged in, since it is still a placeholder. I saw 3 gaps:
+- UC-19 and UC-21 (tracking history) have StatusHistoryEntry but no method that returns a parcel's history.
+- UC-20 (delay alerts) has DelayAlert but no Administrator method to view alerts.
+- UC-12 / FR-11 (view pickups) needs the sender's address, but Parcel only has `senderEmirate`, and neither registration nor booking (FR-01, FR-03) collects a sender address.
 
 ## 2. Consistency with Data Stores
 
