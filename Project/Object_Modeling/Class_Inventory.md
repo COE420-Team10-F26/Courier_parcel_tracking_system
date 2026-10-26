@@ -3,8 +3,8 @@
 | Class ID | Class | Purpose | Related use cases | Contributor |
 | --- | --- | --- | --- | --- |
 | C01 | User (abstract) | Holds the login details and account state shared by all users, including credentials, activation state, temporary-password state, failed login attempts, and lock time. | UC-02, UC-11 | Sarhan Alzaabi (b00100669) |
-| C02 | Customer | Registers, books parcels, and tracks them by tracking number. | UC-01, UC-03, UC-05 | Sarhan Alzaabi (b00100669) |
-| C03 | Parcel | Represents a booked shipment, including its tracking number, dimensions, weight, current status, timestamps, and expected delivery window. | UC-03, UC-04, UC-05, UC-14, UC-19, UC-21 | Sarhan Alzaabi (b00100669) |
+| C02 | Customer | Registers, books parcels, and tracks them by tracking number. | UC-01, UC-03, UC-05, UC-19 | Sarhan Alzaabi (b00100669) |
+| C03 | Parcel | Represents a booked shipment, including its tracking number, dimensions, weight, current status, timestamps, and expected delivery window. | UC-03, UC-04, UC-05, UC-14, UC-15, UC-19, UC-21 | Sarhan Alzaabi (b00100669) |
 | C04 | Recipient | Stores the receiver's name, phone, address, and emirate for a parcel. | UC-03 | Sarhan Alzaabi (b00100669) |
 | C06 | Administrator | Manages user accounts, creates staff/admin accounts, sets staff zones, views parcels, and assigns pending pickups to field staff. | UC-06, UC-07, UC-08, UC-09, UC-10, UC-20, UC-21 | Kevin Alex (b00098368) |
 | C07 | Assignment | Represents one bulk assignment action in which an administrator assigns pending-pickup parcels to one field staff member. | UC-08, UC-09 | Kevin Alex (b00098368) |

@@ -9,8 +9,8 @@ Checked it against the consolidated class diagram, the Lab 3 consolidated requir
 | Class ID | Class | Use cases | FRs |
 | --- | --- | --- | --- |
 | C01 | User (abstract) | UC-02, UC-11 | FR-02, FR-07, FR-10 |
-| C02 | Customer | UC-01, UC-03, UC-05 | FR-01, FR-03, FR-05 |
-| C03 | Parcel | UC-03, UC-04, UC-05, UC-14, UC-19, UC-21 | FR-03, FR-04, FR-05, FR-13, FR-14, FR-19 |
+| C02 | Customer | UC-01, UC-03, UC-05, UC-19 | FR-01, FR-03, FR-05, FR-19 |
+| C03 | Parcel | UC-03, UC-04, UC-05, UC-14, UC-15, UC-19, UC-21 | FR-03, FR-04, FR-05, FR-13, FR-14, FR-18, FR-19 |
 | C04 | Recipient | UC-03 | FR-03 |
 | C06 | Administrator | UC-06 to UC-10, UC-20, UC-21 | FR-06 to FR-10, FR-19, FR-20 |
 | C07 | Assignment | UC-08, UC-09 | FR-08, FR-09 |
@@ -18,7 +18,7 @@ Checked it against the consolidated class diagram, the Lab 3 consolidated requir
 | C11 | FieldStaff | UC-12 to UC-16 | FR-11 to FR-15 |
 | C12 | DeliveryAttempt | UC-14 | FR-13 |
 | C13 | ProofOfDelivery | UC-16 | FR-15 |
-| C14 | ParcelStatus (enum) | UC-14, UC-15, UC-16 | FR-13 |
+| C14 | ParcelStatus (enum) | UC-14, UC-15, UC-16 | FR-13, FR-14, FR-15 |
 | C16 | StatusHistoryEntry | UC-19, UC-21 | FR-18, FR-19 |
 | C17 | Notification (abstract) | UC-17, UC-18 | FR-16, FR-17 |
 | C18 | StatusNotification | UC-17 | FR-16 |
@@ -39,7 +39,7 @@ Every class traces to at least one use case and FR, and UC-12 to UC-16 are cover
 | D1 Users | User, Customer, Administrator, FieldStaff, Zone | Yes |
 | D2 Parcels | Parcel, Recipient, Assignment, ProofOfDelivery, DeliveryAttempt | Yes. Lab 4 does not say where attempts are stored, so they sit with the parcel record. |
 | D3 Status History | StatusHistoryEntry | Yes |
-| None | Notification, StatusNotification, AssignmentNotification, DelayAlert | Yes, by design. A notification only exists in the notification service's outgoing queue until it is sent or its 24-hour retry window ends (NFR-18), and its ID identifies it while it is queued. A DelayAlert is rebuilt from D2 (undelivered, last status change over 48 hours ago). Neither needs a permanent store; a D4 Notifications store would be added only if a notification history were required (see Integration_Notes.md). |
+| None | Notification, StatusNotification, AssignmentNotification, DelayAlert | Yes, by design. A notification only exists in the notification service's outgoing queue until it is sent or its 24-hour retry window ends (NFR-18), and its ID identifies it while it is queued. A DelayAlert only lives on the admin dashboard while it is active (its ID identifies it there, and resolve() clears it at the next real status update), and it can always be rebuilt from D2 (undelivered, last status change over 48 hours ago). Neither needs a permanent store; a D4 Notifications store would be added only if a notification history were required (see Integration_Notes.md). |
 
 The Level-0 processes are also covered by the classes:
 - P1 Manage Accounts and Login: User, Customer, Administrator, FieldStaff, Zone

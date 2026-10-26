@@ -40,10 +40,12 @@ The consolidated model has 16 classes. Before anyone started, `User` and `Parcel
 | 6 | `Assignment.parcelCount` stored the number of parcels | **Removed**; `getParcelCount()` counts the parcels in the "contains" association | Same out-of-sync risk as decision 5. `AssignmentNotification.parcelCount` is kept, because it is a snapshot of what the notification said when it was sent. |
 | 7 | Kevin's "monitors" association between `Administrator` and `Parcel` | **Removed** | Viewing parcels is already the `viewAllParcels()` method, so the association added nothing. |
 | 8 | Kevin's «use» dependencies from `Administrator` to `FieldStaff`, `Zone`, `Parcel` and `DelayAlert` | **Not drawn** in the consolidated diagram | They only repeat types that are already visible in the method signatures, and drawing them crossed most of the diagram. The only dependency kept is `Parcel` «use» `ParcelStatus`. |
-| 9 | `ProofOfDelivery` used a proof image (`proofImagePath`), and a leftover `recievedByName` attribute | Uses **`recipientName`, `signature` and `emiratesId`**, no photo | This was fixed in Lab 3 after instructor feedback (FR-15). |
+| 9 | `ProofOfDelivery` used a proof image (`proofImagePath`), and a leftover `recievedByName` (sic) attribute | Uses **`recipientName`, `signature` and `emiratesId`**, no photo | This was fixed in Lab 3 after instructor feedback (FR-15). |
 | 10 | Hammad's `ParcelStatus` methods `getDisplayName()` and `isFinal()` were missing from the first merge | **Kept** | They are part of Hammad's enumeration and `isFinal()` is useful for Delivered and Returned to Sender. |
 | 11 | Kevin's individual inventory used IDs C01-C03 | Changed to **C06-C08** | C01-C04 were already Sarhan's; the team ranges keep every ID unique and traceable. |
-| 12 | Naming differed between members (`notificationID` vs `userId`, `*` vs `0..*`) | Standardised to **`...Id`** for every ID attribute and **`0..*`** for every "many" multiplicity | One consistent style across the whole diagram. |
+| 12 | Naming differed between members (`notificationID` vs `userId`, `*` vs `0..*`) | In the consolidated diagram, standardised to **`...Id`** for every ID attribute and **`0..*`** for every "many" multiplicity | One consistent style across the whole diagram. |
+| 13 | Some association names differed between the individual diagrams and read less clearly as phrases | Renamed in the consolidated diagram: recipient → **is sent to**, about parcel → **is about**, history of → **records change of**, actor → **made by**, given to → **is given to** | Each association now reads as a sentence from source to target (e.g. "StatusHistoryEntry made by User"). The multiplicities and meaning are unchanged. |
+| 14 | `ProofOfDelivery.notes` was not set by `confirmDelivery()` and is not part of FR-15 | **Removed** in the consolidated diagram | Proof of delivery is exactly name, signature and Emirates ID (FR-15); an attribute nothing sets would always be empty. |
 
 ## 3b. Tidy-ups to the individual diagrams
 
@@ -62,14 +64,14 @@ While integrating, some small presentation fixes were made to the individual dia
 | UC-21 (admin looks up history by parcel ID) had no way to find a parcel by its ID | Added `Administrator.searchParcelHistory(parcelId: int): List<StatusHistoryEntry>` |
 | UC-20 (delay alerts) had no admin method to view alerts | Added `Administrator.viewDelayAlerts(): List<DelayAlert>` |
 | UC-12 / FR-11 (view pickups) needs the sender's address, but `Parcel` only had `senderEmirate` | Added `Parcel.senderAddress`, and `Customer.bookParcel()` now takes `senderAddress` and `senderEmirate`; booking collects both (see the updates to previous labs) |
-| Lab 4 P3 says "reassigning is allowed only before pickup", but there was no method for it | Added `Administrator.reassignParcel(parcel: Parcel, staff: FieldStaff): Assignment`. "contains" stays 0..1 on the `Assignment` side because a parcel belongs to at most one current assignment; reassigning moves it to a new one before pickup (shown in a note) |
+| Lab 4 P3 says "reassigning is allowed only before pickup", but there was no method for it | Added `Administrator.reassignParcel(parcel: Parcel, staff: FieldStaff): Assignment`. "contains" stays 0..1 on the `Assignment` side because a parcel belongs to at most one current assignment; reassigning moves it to a new one before pickup. An assignment whose last parcel is reassigned is cancelled, so no assignment is left with 0 parcels and "1..*" still holds (shown in a note) |
 
 ## 5. Classes without a data store
 
 `Notification`, `StatusNotification`, `AssignmentNotification` and `DelayAlert` have no matching data store in the Lab 4 DFD. They do have IDs and state (`deliveryStatus`, `retryUntil`, `isActive`), so this is a deliberate design choice:
 
 - A notification only needs to exist while it is being delivered. The notification service keeps it in its outgoing queue until it is sent or its 24-hour retry window ends (NFR-18), and the ID identifies it while it is in that queue. Nothing in the requirements asks for old notifications to be kept or viewed later.
-- A `DelayAlert` is worked out from data that is already stored: an undelivered parcel in D2 Parcels whose last status change was more than 48 hours ago. `isActive` turns false when the parcel's status changes again, so the alert can always be rebuilt from D2.
+- A `DelayAlert` lives on the admin dashboard only while it is active. Its ID identifies it on the dashboard, and `resolve()` sets `isActive` to false at the parcel's next real status update, after which it is no longer shown. Every alert can be rebuilt from D2 Parcels (an undelivered parcel whose `lastStatusChangeAt` is more than 48 hours ago), so it needs no separate store. Setting the status to DELAYED does not reset `lastStatusChangeAt`, so it does not restart the 48-hour check.
 
 If the system later needs a notification history, a "D4 Notifications" data store would be added to the Level-0 DFD and the Core Processes Matrix.
 
