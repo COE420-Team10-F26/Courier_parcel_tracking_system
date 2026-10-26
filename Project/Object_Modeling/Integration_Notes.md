@@ -43,9 +43,10 @@ The consolidated model has 16 classes. Before anyone started, `User` and `Parcel
 | 9 | Hammad's first draft of `ProofOfDelivery` used a proof image (`proofImagePath`), and Kevin's first merged draft still had a leftover `recievedByName` (sic) attribute | Uses **`recipientName`, `signature` and `emiratesId`**, no photo | Proof of delivery was defined as name, signature and Emirates ID when Lab 3 was fixed after instructor feedback (FR-15); the drafts were brought in line before the final merge. |
 | 10 | Hammad's `ParcelStatus` methods `getDisplayName()` and `isFinal()` were missing from the first merge | **Kept** | They are part of Hammad's enumeration and `isFinal()` is useful for Delivered and Returned to Sender. |
 | 11 | Kevin's individual inventory used IDs C01-C03 | Changed to **C06-C08** | C01-C04 were already Sarhan's; the team ranges keep every ID unique and traceable. |
-| 12 | Naming differed between members (`notificationID` vs `userId`, `*` vs `0..*`) | In the consolidated diagram, standardized to `...Id` for every ID attribute and `0..*` for every "many" multiplicity | One consistent style across the whole diagram. |
+| 12 | Naming differed between members in the original drafts (`notificationID` vs `userId`, `*` vs `0..*`) | In the consolidated diagram, standardized to `...Id` for every ID attribute and `0..*` for every "many" multiplicity | One consistent style across the whole diagram. |
 | 13 | Some association names differed between the individual diagrams and read less clearly as phrases | Renamed in the consolidated diagram: recipient → **is sent to**, about parcel → **is about**, history of → **records change of**, actor → **made by**, given to → **is given to** | Each association now reads as a sentence from source to target (e.g. "StatusHistoryEntry made by User"). The multiplicities and meaning are unchanged. |
 | 14 | `ProofOfDelivery.notes` was not set by `confirmDelivery()` and is not part of FR-15 | **Removed** in the consolidated diagram | Proof of delivery is exactly name, signature and Emirates ID (FR-15); an attribute nothing sets would always be empty. |
+| 15 | Ahmed's model had exactly 1 `AssignmentNotification` per `Assignment` | Changed to **0..1** at the notification end in the consolidated diagram | The summary is only created when `confirmAssignment()` runs and only exists until it is sent, while the `Assignment` is kept permanently in D2, so an assignment has a summary at most some of the time. |
 
 ## 3b. Tidy-ups to the individual diagrams
 
@@ -68,18 +69,16 @@ While integrating, some small presentation fixes were made to the individual dia
 
 ## 5. Classes without a data store
 
-`Notification`, `StatusNotification`, `AssignmentNotification` and `DelayAlert` have no matching data store in the Lab 4 DFD. They do have IDs and state (`deliveryStatus`, `retryUntil`, `isActive`), so this is a deliberate design choice:
+`Notification`, `StatusNotification` and `AssignmentNotification` have no matching data store in the Lab 4 DFD. They do have IDs and state (`deliveryStatus`, `retryUntil`), so this is a deliberate design choice: a notification only needs to exist while it is being delivered. The notification service keeps it in its outgoing queue until it is sent or its 24-hour retry window ends (NFR-18), and the ID identifies it while it is in that queue. Nothing in the requirements asks for old notifications to be kept or viewed later. If the system later needs a notification history, a "D4 Notifications" data store would be added to the Level-0 DFD and the Core Processes Matrix.
 
-- A notification only needs to exist while it is being delivered. The notification service keeps it in its outgoing queue until it is sent or its 24-hour retry window ends (NFR-18), and the ID identifies it while it is in that queue. Nothing in the requirements asks for old notifications to be kept or viewed later.
-- A `DelayAlert` lives on the admin dashboard only while it is active. Its ID identifies it on the dashboard, and `resolve()` sets `isActive` to false at the parcel's next real status update, after which it is no longer shown. Every alert can be rebuilt from D2 Parcels (an undelivered parcel whose `lastStatusChangeAt` is more than 48 hours ago), so it needs no separate store. Setting the status to DELAYED does not reset `lastStatusChangeAt`, so it does not restart the 48-hour check.
-
-If the system later needs a notification history, a "D4 Notifications" data store would be added to the Level-0 DFD and the Core Processes Matrix.
+`DelayAlert` is different: it is kept with the parcel record in D2 Parcels, the same way delivery attempts are. An alert is created when an undelivered parcel has had no status change for 48 hours, and `resolve()` sets `isActive` to false at the parcel's next real status update, so a parcel can have several alerts over time (0..*), active or resolved. Setting the status to DELAYED does not reset `lastStatusChangeAt`, so it does not restart the 48-hour check.
 
 ## 6. Changes made to previous labs
 
 The lab sheet allows earlier labs to be revised when inconsistencies are found. These changes are in the repository and in the updated reports in `Documents/`:
 
 - **Lab 4 (Oct 25):** the Core Processes Matrix rules were brought in line with the fixed Lab 3 requirements and this class model. P1 now says the admin sets each field staff member's zone. P2 has the full booking validation and delivery window. P3 sets undelivered parcels with no change for 48 hours to Delayed. P4 has the Attempted status with a mandatory note, max 3 attempts, then Returned to Sender. P5 uses the standard status names. The D1 and D2 data store descriptions now cover zones, recipient details, assignments and delivery attempts.
+- **Lab 4 (Oct 27):** the D2 Parcels description also covers delay alerts, matching `DelayAlert`.
 - **Lab 3 and Lab 4 (Oct 27):** booking now collects the sender's pickup address and emirate, matching `Parcel.senderAddress` and `Parcel.senderEmirate`. Updated FR-03, UC-03 and the P2 booking details input.
 
 ## 7. Final model summary

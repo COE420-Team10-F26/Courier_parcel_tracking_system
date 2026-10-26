@@ -199,7 +199,7 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="jtUr7E5vnbG0oKhgSEn_-49" connectable="0" parent="jtUr7E5vnbG0oKhgSEn_-48" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;sets zone via changeStaffZone&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" vertex="1">
+        <mxCell id="jtUr7E5vnbG0oKhgSEn_-49" connectable="0" parent="jtUr7E5vnbG0oKhgSEn_-48" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="&lt;table&gt;&lt;tbody&gt;&lt;tr&gt;&lt;td&gt;&lt;/td&gt;&lt;td&gt;«use» sets zone via changeStaffZone&lt;/td&gt;&lt;/tr&gt;&lt;/tbody&gt;&lt;/table&gt;" vertex="1">
           <mxGeometry relative="1" x="-0.0918" y="-1" as="geometry">
             <mxPoint x="11" as="offset" />
           </mxGeometry>

@@ -37,9 +37,9 @@ Every class traces to at least one use case and FR, and UC-12 to UC-16 are cover
 | Data store | Classes | Result |
 | --- | --- | --- |
 | D1 Users | User, Customer, Administrator, FieldStaff, Zone | Yes |
-| D2 Parcels | Parcel, Recipient, Assignment, ProofOfDelivery, DeliveryAttempt | Yes. Lab 4 does not say where attempts are stored, so they sit with the parcel record. |
+| D2 Parcels | Parcel, Recipient, Assignment, ProofOfDelivery, DeliveryAttempt, DelayAlert | Yes. Delivery attempts and delay alerts (active or resolved) are kept with the parcel record, as the updated D2 description in Lab 4 says. |
 | D3 Status History | StatusHistoryEntry | Yes |
-| None | Notification, StatusNotification, AssignmentNotification, DelayAlert | Yes, by design. A notification only exists in the notification service's outgoing queue until it is sent or its 24-hour retry window ends (NFR-18), and its ID identifies it while it is queued. A DelayAlert only lives on the admin dashboard while it is active (its ID identifies it there, and resolve() clears it at the next real status update), and it can always be rebuilt from D2 (undelivered, last status change over 48 hours ago). Neither needs a permanent store; a D4 Notifications store would be added only if a notification history were required (see Integration_Notes.md). |
+| None | Notification, StatusNotification, AssignmentNotification | Yes, by design. A notification only exists in the notification service's outgoing queue until it is sent or its 24-hour retry window ends (NFR-18), and its ID identifies it while it is queued. Nothing in the requirements asks for sent notifications to be kept, so they need no permanent store; a D4 Notifications store would be added only if a notification history were required (see Integration_Notes.md). |
 
 The Level-0 processes are also covered by the classes:
 - P1 Manage Accounts and Login: User, Customer, Administrator, FieldStaff, Zone
@@ -60,7 +60,7 @@ The Level-0 processes are also covered by the classes:
 | Assignment contains Parcel | 0..1 to 1..* | Yes | Bulk assignment has one or more parcels |
 | Assignment is given to FieldStaff | 0..* to 1 | Yes | Each assignment has one staff member |
 | FieldStaff works in Zone | 0..* to 1 | Yes | Admin always sets one zone (FR-10) |
-| AssignmentNotification summarizes Assignment | 1 to 1 | Yes | One summary per bulk assignment |
+| AssignmentNotification summarizes Assignment | 0..1 to 1 | Yes | At most one summary per assignment; it exists from confirmAssignment() until it is sent (decision 15) |
 | Notification is sent to User | 0..* to 1 | Yes | One recipient each |
 | StatusNotification is about Parcel | 0..* to 1 | Yes | Many notifications per parcel |
 | StatusHistoryEntry records change of Parcel | 0..* to 1 | Yes | One entry per status change (FR-18) |

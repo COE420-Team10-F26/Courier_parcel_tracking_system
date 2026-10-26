@@ -26,7 +26,7 @@
 - Parcels reach field staff through `Assignment`; there is no direct parcel-to-field-staff handling association.
 - The parcel's status remains its `status` attribute and uses the `ParcelStatus` enumeration.
 - `StatusNotification` and `AssignmentNotification` inherit from `Notification`.
-- Each bulk `Assignment` has exactly one `AssignmentNotification` summary.
+- Each confirmed `Assignment` has at most one `AssignmentNotification` summary, which exists until it is sent.
 - `StatusHistoryEntry` belongs to a `Parcel`; the `User` who made the change is optional for system-generated changes.
 - A parcel is delayed when it is undelivered and has had no status change for 48 hours.
 - Duplicates and conflicts found while merging, and how each was resolved, are recorded in `Integration_Notes.md`.
