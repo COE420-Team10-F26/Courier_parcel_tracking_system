@@ -51,7 +51,7 @@ These are the only parcel statuses used across the scenarios, requirements and u
 | Status | Meaning |
 | --- | --- |
 | Booked | Customer completes a booking and a tracking number (CPT-XXXXXX) is generated. |
-| Pending Pickup | Confirmed parcel waiting for an admin to assign it to field staff. |
+| Pending Pickup | Set automatically as soon as the booking is confirmed; the parcel waits for an admin to assign it to field staff. |
 | Assigned | Admin assigns the parcel to a field staff member. |
 | Picked Up | Field staff collects the parcel from the sender and confirms it in the app (pickup time recorded). |
 | In Transit | Parcel is moving through sorting hubs toward the destination city. |

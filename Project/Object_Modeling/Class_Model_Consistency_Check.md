@@ -43,7 +43,7 @@ Every class traces to at least one use case and FR, and UC-12 to UC-16 are cover
 
 The Level-0 processes are also covered by the classes:
 - P1 Manage Accounts and Login: User, Customer, Administrator, FieldStaff, Zone
-- P2 Book Parcel: Customer, Parcel, Recipient
+- P2 Book Parcel: Customer, Parcel, Recipient, StatusHistoryEntry
 - P3 Assign/Monitor Parcels: Administrator, Assignment, AssignmentNotification, DelayAlert
 - P4 Update Parcel Status: FieldStaff, DeliveryAttempt, ProofOfDelivery, Parcel, ParcelStatus, StatusHistoryEntry
 - P5 Tracking and Notifications: Customer, Parcel, StatusHistoryEntry, StatusNotification
