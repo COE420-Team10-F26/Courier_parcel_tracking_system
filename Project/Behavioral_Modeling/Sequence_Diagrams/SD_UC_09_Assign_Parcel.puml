@@ -1,0 +1,75 @@
+@startuml
+title UC-09 – Assign Parcels to Field Staff
+skinparam sequenceMessageAlign left
+skinparam style strictuml
+
+actor Admin
+participant ":Administrator" as A
+participant ":Parcel" as P
+participant ":Assignment" as As
+participant ":StatusHistoryEntry" as H
+participant ":DelayAlert" as D
+participant ":StatusNotification" as SN
+participant ":AssignmentNotification" as N
+
+Admin -> A : viewAllParcels()
+activate A
+A --> Admin : List<Parcel>
+
+Admin -> A : getUnassignedParcels()
+A --> Admin : List<Parcel>
+
+Admin -> A : ~*[for each staff] getStaffWorkload(staff)
+A --> Admin : workload : int
+
+Admin -> A : [staff active] assignParcels(parcels, staff)
+
+create As
+A -> As : <<create>> Assignment
+activate As
+
+A -> As : ~*[for each parcel p] addParcel(p)
+
+A -> As : validateParcels()
+As --> A : valid : boolean
+
+A -> As : [valid = true] confirmAssignment()
+
+As -> P : ~*[for each parcel p] updateStatus(ASSIGNED)
+activate P
+
+' ---- SHARED BLOCK (identical in all three diagrams) ----
+create H
+P -> H : <<create>> StatusHistoryEntry
+
+P -> D : [active delay alert] resolve()
+activate D
+D --> P
+deactivate D
+
+create SN
+P -> SN : <<create>> StatusNotification
+P -> SN : buildMessage()
+SN --> P : message : String
+P -> SN : send()
+SN --> P : sent : boolean
+' ---- END SHARED BLOCK ----
+
+P --> As
+deactivate P
+
+As -> As : getParcelCount()
+As -> As : getAssignedStaff()
+
+create N
+As -> N : <<create>> AssignmentNotification
+As -> N : buildSummary()
+N --> As : summary : String
+As -> N : send()
+N --> As : sent : boolean
+
+As --> A
+deactivate As
+A --> Admin : Assignment
+deactivate A
+@enduml
