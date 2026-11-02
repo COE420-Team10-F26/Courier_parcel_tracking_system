@@ -23,7 +23,8 @@ A system that lets customers book and track parcels, admins assign parcels to fi
 | `Project/Data_Flow_Modeling/` | Context diagram, Level-0 DFD, Core Processes Matrix and DFD consistency check | Lab 4 |
 | `Project/Project_Scheduling/` | WBS, Gantt chart, network schedule and critical path | Lab 4 |
 | `Project/Object_Modeling/` | Individual class models, consolidated class inventory, integration notes, consolidated class diagram and consistency check | Lab 5 |
-| `Documents/` | Lab reports | Labs 3 to 5 |
+| `Project/Behavioral_Modeling/` | Selected use cases and sequence diagrams | Lab 6 |
+| `Documents/` | Lab reports | Labs 3 to 6 |
 | `Source_Code/` | Implementation (later) | |
 
 - **Organization:** COE420-Team10-F26
