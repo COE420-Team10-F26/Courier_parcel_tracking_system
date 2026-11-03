@@ -2,6 +2,10 @@
 title UC-09 Assign Parcels to Field Staff (Kevin Alex, b00098368)
 skinparam sequenceMessageAlign left
 skinparam style strictuml
+skinparam dpi 150
+skinparam monochrome true
+skinparam shadowing false
+skinparam defaultFontName Helvetica
 
 actor Admin
 participant ":Administrator" as A
@@ -14,24 +18,24 @@ participant ":AssignmentNotification" as N
 
 Admin -> A : viewAllParcels()
 activate A
-A --> Admin : List<Parcel>
+A -->> Admin : List<Parcel>
 
 Admin -> A : getUnassignedParcels()
-A --> Admin : List<Parcel>
+A -->> Admin : List<Parcel>
 
 Admin -> A : ~*[for each staff] getStaffWorkload(staff)
-A --> Admin : workload : int
+A -->> Admin : workload : int
 
 Admin -> A : [staff active] assignParcels(parcels, staff)
 
 create As
-A -> As : <<create>> Assignment
+A -->> As : <<create>> Assignment(staff)
 activate As
 
 A -> As : ~*[for each parcel p] addParcel(p)
 
 A -> As : validateParcels()
-As --> A : valid : boolean
+As -->> A : valid : boolean
 
 alt valid = true
 A -> As : confirmAssignment()
@@ -41,46 +45,46 @@ activate P
 
 ' ---- SHARED BLOCK (same steps in UC-03, UC-09 and UC-16) ----
 create H
-P -> H : <<create>> StatusHistoryEntry
+P -->> H : <<create>> StatusHistoryEntry(PENDING_PICKUP, ASSIGNED)
 
 P -> D : [active delay alert] resolve()
 activate D
-D --> P
+D -->> P
 deactivate D
 
 create SN
-P -> SN : <<create>> StatusNotification
+P -->> SN : <<create>> StatusNotification(parcel)
 P -> SN : buildMessage()
 activate SN
-SN --> P : message : String
+SN -->> P : message : String
 P -> SN : send()
-SN --> P : sent : boolean
+SN -->> P : sent : boolean
 deactivate SN
 ' ---- END SHARED BLOCK ----
 
-P --> As
+P -->> As
 deactivate P
 
 As -> As : getParcelCount()
-As --> As : count : int
+As -->> As : count : int
 As -> As : getAssignedStaff()
-As --> As : staff : FieldStaff
+As -->> As : staff : FieldStaff
 
 create N
-As -> N : <<create>> AssignmentNotification(count, staff)
+As -->> N : <<create>> AssignmentNotification(count, staff)
 As -> N : buildSummary()
 activate N
-N --> As : summary : String
+N -->> As : summary : String
 deactivate N
 As -> N : send()
 activate N
-N --> As : sent : boolean
+N -->> As : sent : boolean
 deactivate N
 
-As --> A
-A --> Admin : Assignment
+As -->> A
+A -->> Admin : Assignment
 else else
-A --> Admin : invalid parcels, assignment not confirmed
+A -->> Admin : invalid parcels, assignment not confirmed
 end
 deactivate As
 deactivate A
