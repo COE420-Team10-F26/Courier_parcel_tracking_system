@@ -1,5 +1,5 @@
 @startuml
-title UC-09 – Assign Parcels to Field Staff
+title UC-09 Assign Parcels to Field Staff (Kevin Alex, b00098368)
 skinparam sequenceMessageAlign left
 skinparam style strictuml
 
@@ -33,12 +33,13 @@ A -> As : ~*[for each parcel p] addParcel(p)
 A -> As : validateParcels()
 As --> A : valid : boolean
 
-A -> As : [valid = true] confirmAssignment()
+alt valid = true
+A -> As : confirmAssignment()
 
 As -> P : ~*[for each parcel p] updateStatus(ASSIGNED)
 activate P
 
-' ---- SHARED BLOCK (identical in all three diagrams) ----
+' ---- SHARED BLOCK (same steps in UC-03, UC-09 and UC-16) ----
 create H
 P -> H : <<create>> StatusHistoryEntry
 
@@ -50,26 +51,37 @@ deactivate D
 create SN
 P -> SN : <<create>> StatusNotification
 P -> SN : buildMessage()
+activate SN
 SN --> P : message : String
 P -> SN : send()
 SN --> P : sent : boolean
+deactivate SN
 ' ---- END SHARED BLOCK ----
 
 P --> As
 deactivate P
 
 As -> As : getParcelCount()
+As --> As : count : int
 As -> As : getAssignedStaff()
+As --> As : staff : FieldStaff
 
 create N
-As -> N : <<create>> AssignmentNotification
+As -> N : <<create>> AssignmentNotification(count, staff)
 As -> N : buildSummary()
+activate N
 N --> As : summary : String
+deactivate N
 As -> N : send()
+activate N
 N --> As : sent : boolean
+deactivate N
 
 As --> A
-deactivate As
 A --> Admin : Assignment
+else else
+A --> Admin : invalid parcels, assignment not confirmed
+end
+deactivate As
 deactivate A
 @enduml
