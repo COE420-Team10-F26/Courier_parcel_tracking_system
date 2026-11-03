@@ -1,0 +1,184 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="SD_UC-16_Record_Proof_of_Delivery" id="sd-uc16">
+    <mxGraphModel dx="1585" dy="823" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="1720" pageHeight="1160" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="c3" parent="1" style="shape=umlLifeline;participant=umlActor;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;collapsible=0;recursiveResize=0;outlineConnect=0;verticalAlign=top;spacingTop=36;labelBackgroundColor=#ffffff;" value="Field Staff" vertex="1">
+          <mxGeometry height="1090" width="30" x="80" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="c4" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;collapsible=0;recursiveResize=0;outlineConnect=0;size=40;" value=":FieldStaff" vertex="1">
+          <mxGeometry height="1090" width="150" x="475" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="c5" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;collapsible=0;recursiveResize=0;outlineConnect=0;size=40;" value=":Parcel" vertex="1">
+          <mxGeometry height="1090" width="150" x="685" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="c6" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;collapsible=0;recursiveResize=0;outlineConnect=0;size=40;" value=":ProofOfDelivery" vertex="1">
+          <mxGeometry height="735" width="150" x="885" y="465" as="geometry" />
+        </mxCell>
+        <mxCell id="c7" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;collapsible=0;recursiveResize=0;outlineConnect=0;size=40;" value=":StatusHistoryEntry" vertex="1">
+          <mxGeometry height="505" width="150" x="1085" y="695" as="geometry" />
+        </mxCell>
+        <mxCell id="c8" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;collapsible=0;recursiveResize=0;outlineConnect=0;size=40;" value=":DelayAlert" vertex="1">
+          <mxGeometry height="1090" width="150" x="1275" y="110" as="geometry" />
+        </mxCell>
+        <mxCell id="c9" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=0;collapsible=0;recursiveResize=0;outlineConnect=0;size=40;" value=":StatusNotification" vertex="1">
+          <mxGeometry height="355" width="150" x="1475" y="845" as="geometry" />
+        </mxCell>
+        <mxCell id="c10" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#ffffff;" value="" vertex="1">
+          <mxGeometry height="40" width="12" x="544" y="220" as="geometry" />
+        </mxCell>
+        <mxCell id="c11" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#ffffff;" value="" vertex="1">
+          <mxGeometry height="40" width="12" x="544" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="c12" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#ffffff;" value="" vertex="1">
+          <mxGeometry height="710" width="12" x="544" y="430" as="geometry" />
+        </mxCell>
+        <mxCell id="c13" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#ffffff;" value="" vertex="1">
+          <mxGeometry height="40" width="12" x="754" y="310" as="geometry" />
+        </mxCell>
+        <mxCell id="c14" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#ffffff;" value="" vertex="1">
+          <mxGeometry height="420" width="12" x="754" y="660" as="geometry" />
+        </mxCell>
+        <mxCell id="c15" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#ffffff;" value="" vertex="1">
+          <mxGeometry height="75" width="12" x="954" y="505" as="geometry" />
+        </mxCell>
+        <mxCell id="c16" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#ffffff;" value="" vertex="1">
+          <mxGeometry height="25" width="12" x="1344" y="790" as="geometry" />
+        </mxCell>
+        <mxCell id="c17" parent="1" style="html=1;points=[];perimeter=orthogonalPerimeter;fillColor=#ffffff;" value="" vertex="1">
+          <mxGeometry height="155" width="12" x="1544" y="885" as="geometry" />
+        </mxCell>
+        <mxCell id="c18" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=40;height=20;fillColor=none;" value="opt" vertex="1">
+          <mxGeometry height="780" width="1620" x="50" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="c19" parent="1" style="text;html=1;align=left;verticalAlign=middle;labelBackgroundColor=#ffffff;" value="[status = OUT_FOR_DELIVERY]" vertex="1">
+          <mxGeometry height="20" width="197" x="98" y="390" as="geometry" />
+        </mxCell>
+        <mxCell id="c20" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=40;height=20;fillColor=none;" value="opt" vertex="1">
+          <mxGeometry height="485" width="1270" x="380" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="c21" parent="1" style="text;html=1;align=left;verticalAlign=middle;labelBackgroundColor=#ffffff;" value="[isComplete()]" vertex="1">
+          <mxGeometry height="20" width="106" x="428" y="620" as="geometry" />
+        </mxCell>
+        <mxCell id="c22" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;width=40;height=20;fillColor=none;" value="opt" vertex="1">
+          <mxGeometry height="70" width="920" x="560" y="755" as="geometry" />
+        </mxCell>
+        <mxCell id="c23" parent="1" style="text;html=1;align=left;verticalAlign=middle;labelBackgroundColor=#ffffff;" value="[active delay alert]" vertex="1">
+          <mxGeometry height="20" width="148" x="608" y="755" as="geometry" />
+        </mxCell>
+        <mxCell id="c24" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endSize=8;endFill=1;" value="viewAssignedParcels()">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="110" y="220" as="sourcePoint" />
+            <mxPoint x="544" y="220" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c25" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endSize=8;dashed=1;" value="List&amp;lt;Parcel&amp;gt;">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="544" y="260" as="sourcePoint" />
+            <mxPoint x="100" y="260" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c26" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endSize=8;endFill=1;" value="getStatus()">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="556" y="310" as="sourcePoint" />
+            <mxPoint x="754" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c27" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endSize=8;dashed=1;" value="status">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="754" y="350" as="sourcePoint" />
+            <mxPoint x="556" y="350" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c28" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endSize=8;endFill=1;" value="confirmDelivery(parcel, recipientName, signature, emiratesId)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="110" y="430" as="sourcePoint" />
+            <mxPoint x="544" y="430" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c29" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endSize=8;dashed=1;" value="«create» ProofOfDelivery">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="556" y="485" as="sourcePoint" />
+            <mxPoint x="885" y="485" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c30" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endSize=8;endFill=1;" value="isComplete()">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="556" y="540" as="sourcePoint" />
+            <mxPoint x="954" y="540" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c31" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endSize=8;dashed=1;" value="true">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="954" y="580" as="sourcePoint" />
+            <mxPoint x="556" y="580" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c32" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endSize=8;endFill=1;" value="updateStatus(DELIVERED)">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="556" y="660" as="sourcePoint" />
+            <mxPoint x="754" y="660" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c33" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endSize=8;dashed=1;" value="«create» StatusHistoryEntry">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="766" y="715" as="sourcePoint" />
+            <mxPoint x="1085" y="715" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c34" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endSize=8;endFill=1;" value="resolve()">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="766" y="790" as="sourcePoint" />
+            <mxPoint x="1344" y="790" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c35" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endSize=8;dashed=1;" value="«create» StatusNotification">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="766" y="865" as="sourcePoint" />
+            <mxPoint x="1475" y="865" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c36" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endSize=8;endFill=1;" value="buildMessage()">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="766" y="910" as="sourcePoint" />
+            <mxPoint x="1544" y="910" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c37" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endSize=8;dashed=1;" value="message">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1544" y="950" as="sourcePoint" />
+            <mxPoint x="766" y="950" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c38" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;endSize=8;endFill=1;" value="send()">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="766" y="1000" as="sourcePoint" />
+            <mxPoint x="1544" y="1000" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c39" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endSize=8;dashed=1;" value="sent">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1544" y="1040" as="sourcePoint" />
+            <mxPoint x="766" y="1040" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c40" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endSize=8;dashed=1;" value="done">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="754" y="1080" as="sourcePoint" />
+            <mxPoint x="556" y="1080" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="c41" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=open;endSize=8;dashed=1;" value="ProofOfDelivery">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="544" y="1140" as="sourcePoint" />
+            <mxPoint x="100" y="1140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Szvusp2YValO828GZWHC-1" parent="1" style="rounded=0;whiteSpace=wrap;html=1;" value="&lt;b&gt;UC-16 Record Proof of Delivery (Muhammad Hammad, b00094579)&lt;/b&gt;" vertex="1">
+          <mxGeometry height="25" width="390" x="490" y="30" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
