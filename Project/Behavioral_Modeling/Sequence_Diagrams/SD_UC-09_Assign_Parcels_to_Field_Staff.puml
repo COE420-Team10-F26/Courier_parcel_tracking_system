@@ -36,6 +36,10 @@ A -> As : ~*[for each parcel p] addParcel(p)
 
 A -> As : validateParcels()
 As -->> A : valid : boolean
+note right of As
+valid = every parcel is Pending Pickup,
+or Delayed while Pending Pickup (status table)
+end note
 
 alt valid = true
 A -> As : confirmAssignment()
@@ -45,7 +49,7 @@ activate P
 
 ' ---- SHARED BLOCK (same steps in UC-03, UC-09 and UC-16) ----
 create H
-P -->> H : <<create>> StatusHistoryEntry(PENDING_PICKUP, ASSIGNED)
+P -->> H : <<create>> StatusHistoryEntry(\nprevious status, ASSIGNED)
 
 P -> D : [active delay alert] resolve()
 activate D

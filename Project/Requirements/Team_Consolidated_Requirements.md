@@ -58,7 +58,7 @@ These are the only parcel statuses used across the scenarios, requirements and u
 | Out for Delivery | Field staff starts the delivery round with the parcel. |
 | Attempted | A delivery attempt failed (e.g. no one answered); a note is mandatory and the parcel is retried (maximum 3 attempts). |
 | Delivered | Parcel handed over and valid proof of delivery captured (name, signature, Emirates ID). |
-| Delayed | Undelivered parcel with no status change for 48 hours; also raises an alert on the admin dashboard. |
+| Delayed | Undelivered parcel with no status change for 48 hours; also raises an alert on the admin dashboard. A Delayed parcel still counts as the status it had before the delay (shown by its latest history entry), so it can still be assigned or delivered; its delay alert is resolved at its next status update. |
 | Returned to Sender | Final state after the 3rd failed delivery attempt; the customer is notified. |
 
 ---
