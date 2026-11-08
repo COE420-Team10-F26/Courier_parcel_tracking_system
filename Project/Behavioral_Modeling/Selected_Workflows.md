@@ -12,10 +12,10 @@ Each member fills in their own section below.
 ## UC-03 Book Parcel (Sarhan Alzaabi, b00100669)
 - **Primary actor:** Customer
 - **Swimlanes:** Customer, System, Notification
-- **Main flow:** _to be filled by Sarhan_
-- **Decisions and guards:** _to be filled by Sarhan_
-- **Merges:** _to be filled by Sarhan_
-- **Forks and joins:** _to be filled by Sarhan_
+- **Main flow:** The Customer enters the pickup, recipient and parcel details and submits the booking. The System validates the details (FR-03). If they are valid, the System creates the parcel with status Booked, generates its tracking number (`<<include>>` UC-04, FR-04), sets the status to Pending Pickup and records the status history entry (P2). The flow then forks: the Notification lane sends the Pending Pickup notification to the customer (FR-16) while the System calculates the expected delivery window (24 h if the recipient is in the same emirate as the sender, 48 h if not). After the join, the Customer views the confirmation with the tracking number and delivery window and the flow ends.
+- **Decisions and guards:** After "Validate booking details": `[valid]` creates the parcel and `[invalid]` shows the errors next to the fields and keeps the entered data (NFR-04). After the errors are shown, the Customer decides: `[correct and resubmit]` goes back to entering the details and `[cancel]` ends the flow with nothing created. There is no `[active delay alert]` decision, because a newly created parcel cannot have a delay alert (a note on the diagram explains this).
+- **Merges:** One merge, before "Enter pickup, recipient and parcel details". It joins the initial flow and the `[correct and resubmit]` path.
+- **Forks and joins:** One fork after "Record status history entry" and one join before "View confirmation". Sending the Pending Pickup notification and calculating the delivery window run in parallel: send() hands the notification to the queue and returns at once (NFR-18, NFR-19), and the window does not depend on it. The history entry is recorded before the fork, so the notification always follows it (P5 rule 5).
 - **Lab 6 sequence diagram:** `Sequence_Diagrams/SD_UC-03_Book_Parcel.png`
 - **Activity diagram:** `Activity_Diagrams/AD_UC-03_Book_Parcel.pdf`
 
