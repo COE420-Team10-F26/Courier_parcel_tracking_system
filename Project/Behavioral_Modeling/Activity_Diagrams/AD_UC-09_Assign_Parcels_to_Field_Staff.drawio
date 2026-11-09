@@ -10,16 +10,16 @@
         <mxCell id="X7GI3sgepbDjkfEGPn9F-2" parent="X7GI3sgepbDjkfEGPn9F-1" style="ellipse;shape=startState;fillColor=#000000;strokeColor=#ff0000;" value="" vertex="1">
           <mxGeometry height="30" width="30" x="137.75" y="28" as="geometry" />
         </mxCell>
-        <mxCell id="X7GI3sgepbDjkfEGPn9F-4" parent="X7GI3sgepbDjkfEGPn9F-1" style="" value="Request&#10;parcel list" vertex="1">
+        <mxCell id="X7GI3sgepbDjkfEGPn9F-4" parent="X7GI3sgepbDjkfEGPn9F-1" style="rounded=1;arcSize=30;whiteSpace=wrap;" value="Request&#10;parcel list" vertex="1">
           <mxGeometry height="50" width="110" x="97.75" y="148" as="geometry" />
         </mxCell>
-        <mxCell id="X7GI3sgepbDjkfEGPn9F-7" parent="X7GI3sgepbDjkfEGPn9F-1" style="" value="Select parcels" vertex="1">
+        <mxCell id="X7GI3sgepbDjkfEGPn9F-7" parent="X7GI3sgepbDjkfEGPn9F-1" style="rounded=1;arcSize=30;whiteSpace=wrap;" value="Select parcels" vertex="1">
           <mxGeometry height="50" width="110" x="97.75" y="218" as="geometry" />
         </mxCell>
-        <mxCell id="X7GI3sgepbDjkfEGPn9F-37" parent="X7GI3sgepbDjkfEGPn9F-1" style="" value="Select staff" vertex="1">
+        <mxCell id="X7GI3sgepbDjkfEGPn9F-37" parent="X7GI3sgepbDjkfEGPn9F-1" style="rounded=1;arcSize=30;whiteSpace=wrap;" value="Select staff" vertex="1">
           <mxGeometry height="50" width="110" x="97.75" y="358" as="geometry" />
         </mxCell>
-        <mxCell id="X7GI3sgepbDjkfEGPn9F-41" parent="X7GI3sgepbDjkfEGPn9F-1" style="" value="Submit" vertex="1">
+        <mxCell id="X7GI3sgepbDjkfEGPn9F-41" parent="X7GI3sgepbDjkfEGPn9F-1" style="rounded=1;arcSize=30;whiteSpace=wrap;" value="Submit" vertex="1">
           <mxGeometry height="50" width="110" x="97.75" y="438" as="geometry" />
         </mxCell>
         <mxCell id="X7GI3sgepbDjkfEGPn9F-65" parent="X7GI3sgepbDjkfEGPn9F-1" style="rhombus;fillColor=#ffffc0;strokeColor=#ff0000;" value="merge" vertex="1">
@@ -37,16 +37,16 @@
         <mxCell id="X7GI3sgepbDjkfEGPn9F-10" parent="1" style="swimlane;whiteSpace=wrap;startSize=23;" value="System" vertex="1">
           <mxGeometry height="1022" width="561.75" x="468.25" y="148" as="geometry" />
         </mxCell>
-        <mxCell id="X7GI3sgepbDjkfEGPn9F-5" parent="X7GI3sgepbDjkfEGPn9F-10" style="" value="Show unassigned&#10;Pending Pickup parcels" vertex="1">
+        <mxCell id="X7GI3sgepbDjkfEGPn9F-5" parent="X7GI3sgepbDjkfEGPn9F-10" style="rounded=1;arcSize=30;whiteSpace=wrap;" value="Show unassigned&#10;Pending Pickup parcels" vertex="1">
           <mxGeometry height="50" width="170" x="31.75" y="218" as="geometry" />
         </mxCell>
-        <mxCell id="X7GI3sgepbDjkfEGPn9F-16" parent="X7GI3sgepbDjkfEGPn9F-10" style="" value="Show active staff with&#10;workload and zones" vertex="1">
+        <mxCell id="X7GI3sgepbDjkfEGPn9F-16" parent="X7GI3sgepbDjkfEGPn9F-10" style="rounded=1;arcSize=30;whiteSpace=wrap;" value="Show active staff with&#10;workload and zones" vertex="1">
           <mxGeometry height="50" width="170" x="31.75" y="288" as="geometry" />
         </mxCell>
-        <mxCell id="X7GI3sgepbDjkfEGPn9F-44" parent="X7GI3sgepbDjkfEGPn9F-10" style="" value="Create assignment&#10;and add parcels" vertex="1">
+        <mxCell id="X7GI3sgepbDjkfEGPn9F-44" parent="X7GI3sgepbDjkfEGPn9F-10" style="rounded=1;arcSize=30;whiteSpace=wrap;" value="Create assignment&#10;and add parcels" vertex="1">
           <mxGeometry height="50" width="126.37" x="107.25999999999999" y="752" as="geometry" />
         </mxCell>
-        <mxCell id="X7GI3sgepbDjkfEGPn9F-46" parent="X7GI3sgepbDjkfEGPn9F-10" style="" value="Validate (every parcel&#10;Pending Pickup,&#10;or Delayed while&#10;Pending Pickup)" vertex="1">
+        <mxCell id="X7GI3sgepbDjkfEGPn9F-46" parent="X7GI3sgepbDjkfEGPn9F-10" style="rounded=1;arcSize=30;whiteSpace=wrap;" value="Validate (every parcel&#10;Pending Pickup,&#10;or Delayed while&#10;Pending Pickup)" vertex="1">
           <mxGeometry height="70" width="126.37" x="107.25" y="602" as="geometry" />
         </mxCell>
         <mxCell id="X7GI3sgepbDjkfEGPn9F-47" edge="1" parent="X7GI3sgepbDjkfEGPn9F-10" source="X7GI3sgepbDjkfEGPn9F-44" style="endArrow=open;strokeColor=#FF0000;endFill=1;rounded=0;defaultLabelBackgroundColor=page;entryX=0.5;entryY=1;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="X7GI3sgepbDjkfEGPn9F-46" value="">
@@ -70,7 +70,7 @@
         <mxCell id="X7GI3sgepbDjkfEGPn9F-80" parent="X7GI3sgepbDjkfEGPn9F-10" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="[valid]" vertex="1">
           <mxGeometry height="30" width="60" x="199.06" y="531" as="geometry" />
         </mxCell>
-        <mxCell id="X7GI3sgepbDjkfEGPn9F-81" parent="X7GI3sgepbDjkfEGPn9F-10" style="" value="Confirm assignment" vertex="1">
+        <mxCell id="X7GI3sgepbDjkfEGPn9F-81" parent="X7GI3sgepbDjkfEGPn9F-10" style="rounded=1;arcSize=30;whiteSpace=wrap;" value="Confirm assignment" vertex="1">
           <mxGeometry height="50" width="124.5" x="264.94" y="507" as="geometry" />
         </mxCell>
         <mxCell id="X7GI3sgepbDjkfEGPn9F-82" parent="X7GI3sgepbDjkfEGPn9F-10" style="rhombus;fillColor=#ffffc0;strokeColor=#ff0000;" value="merge" vertex="1">
@@ -82,7 +82,7 @@
             <mxPoint x="359.94" y="382" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="X7GI3sgepbDjkfEGPn9F-55" parent="X7GI3sgepbDjkfEGPn9F-10" style="" value="Set next parcel to Assigned" vertex="1">
+        <mxCell id="X7GI3sgepbDjkfEGPn9F-55" parent="X7GI3sgepbDjkfEGPn9F-10" style="rounded=1;arcSize=30;whiteSpace=wrap;" value="Set next parcel to Assigned" vertex="1">
           <mxGeometry height="50" width="154.5" x="249.94" y="682" as="geometry" />
         </mxCell>
         <mxCell id="X7GI3sgepbDjkfEGPn9F-84" edge="1" parent="X7GI3sgepbDjkfEGPn9F-10" source="X7GI3sgepbDjkfEGPn9F-82" style="endArrow=open;strokeColor=#FF0000;endFill=1;rounded=0;defaultLabelBackgroundColor=page;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="X7GI3sgepbDjkfEGPn9F-55" value="">
@@ -91,7 +91,7 @@
             <mxPoint x="364.94" y="462" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="X7GI3sgepbDjkfEGPn9F-85" parent="X7GI3sgepbDjkfEGPn9F-10" style="" value="Record status&#10;history entry" vertex="1">
+        <mxCell id="X7GI3sgepbDjkfEGPn9F-85" parent="X7GI3sgepbDjkfEGPn9F-10" style="rounded=1;arcSize=30;whiteSpace=wrap;" value="Record status&#10;history entry" vertex="1">
           <mxGeometry height="50" width="124.5" x="264.94" y="757" as="geometry" />
         </mxCell>
         <mxCell id="X7GI3sgepbDjkfEGPn9F-86" edge="1" parent="X7GI3sgepbDjkfEGPn9F-10" source="X7GI3sgepbDjkfEGPn9F-55" style="endArrow=open;strokeColor=#FF0000;endFill=1;rounded=0;defaultLabelBackgroundColor=page;exitX=0.706;exitY=1.024;exitDx=0;exitDy=0;entryX=0.75;entryY=0;entryDx=0;entryDy=0;exitPerimeter=0;" target="X7GI3sgepbDjkfEGPn9F-85" value="">
@@ -109,7 +109,7 @@
             <mxPoint x="364.94" y="666" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="X7GI3sgepbDjkfEGPn9F-89" parent="X7GI3sgepbDjkfEGPn9F-10" style="" value="Resolve delay alert" vertex="1">
+        <mxCell id="X7GI3sgepbDjkfEGPn9F-89" parent="X7GI3sgepbDjkfEGPn9F-10" style="rounded=1;arcSize=30;whiteSpace=wrap;" value="Resolve delay alert" vertex="1">
           <mxGeometry height="50" width="110" x="134.44" y="902" as="geometry" />
         </mxCell>
         <mxCell id="X7GI3sgepbDjkfEGPn9F-90" edge="1" parent="X7GI3sgepbDjkfEGPn9F-10" source="X7GI3sgepbDjkfEGPn9F-87" style="endArrow=open;strokeColor=#FF0000;endFill=1;rounded=0;defaultLabelBackgroundColor=page;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" target="X7GI3sgepbDjkfEGPn9F-89" value="">
@@ -151,22 +151,22 @@
             <mxPoint x="170.43000000000006" y="252" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="X7GI3sgepbDjkfEGPn9F-61" parent="X7GI3sgepbDjkfEGPn9F-10" style="" value="Show &quot;invalid parcels,&#10;assignment not confirmed&quot;" vertex="1">
+        <mxCell id="X7GI3sgepbDjkfEGPn9F-61" parent="X7GI3sgepbDjkfEGPn9F-10" style="rounded=1;arcSize=30;whiteSpace=wrap;" value="Show &quot;invalid parcels,&#10;assignment not confirmed&quot;" vertex="1">
           <mxGeometry height="50" width="154.5" x="101.75" y="410" as="geometry" />
         </mxCell>
         <mxCell id="X7GI3sgepbDjkfEGPn9F-33" parent="X7GI3sgepbDjkfEGPn9F-10" style="ellipse;shape=endState;fillColor=#000000;strokeColor=#ff0000" value="" vertex="1">
           <mxGeometry height="30" width="30" x="484.45" y="432" as="geometry" />
         </mxCell>
-        <mxCell id="X7GI3sgepbDjkfEGPn9F-107" parent="X7GI3sgepbDjkfEGPn9F-10" style="" value="Show confirmation" vertex="1">
+        <mxCell id="X7GI3sgepbDjkfEGPn9F-107" parent="X7GI3sgepbDjkfEGPn9F-10" style="rounded=1;arcSize=30;whiteSpace=wrap;" value="Show confirmation" vertex="1">
           <mxGeometry height="50" width="110" x="444.45" y="492" as="geometry" />
         </mxCell>
         <mxCell id="X7GI3sgepbDjkfEGPn9F-111" parent="X7GI3sgepbDjkfEGPn9F-10" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="[all parcels done]" vertex="1">
           <mxGeometry height="20" width="40" x="503.75" y="687" as="geometry" />
         </mxCell>
-        <mxCell id="X7GI3sgepbDjkfEGPn9F-121" parent="X7GI3sgepbDjkfEGPn9F-10" style="" value="Show all parcels with&#10;status, zone and staff" vertex="1">
+        <mxCell id="X7GI3sgepbDjkfEGPn9F-121" parent="X7GI3sgepbDjkfEGPn9F-10" style="rounded=1;arcSize=30;whiteSpace=wrap;" value="Show all parcels with&#10;status, zone and staff" vertex="1">
           <mxGeometry height="50" width="170" x="31.75" y="148" as="geometry" />
         </mxCell>
-        <mxCell id="X7GI3sgepbDjkfEGPn9F-120" parent="X7GI3sgepbDjkfEGPn9F-10" style="" value="Get parcel count&#10;and assigned staff" vertex="1">
+        <mxCell id="X7GI3sgepbDjkfEGPn9F-120" parent="X7GI3sgepbDjkfEGPn9F-10" style="rounded=1;arcSize=30;whiteSpace=wrap;" value="Get parcel count&#10;and assigned staff" vertex="1">
           <mxGeometry height="50" width="110" x="444.45" y="592" as="geometry" />
         </mxCell>
         <mxCell id="X7GI3sgepbDjkfEGPn9F-79" edge="1" parent="X7GI3sgepbDjkfEGPn9F-10" source="X7GI3sgepbDjkfEGPn9F-49" style="endArrow=open;strokeColor=#FF0000;endFill=1;rounded=0;defaultLabelBackgroundColor=page;exitX=1;exitY=0.5;entryX=0;entryY=0.5;" target="X7GI3sgepbDjkfEGPn9F-81" value="">
@@ -175,10 +175,10 @@
         <mxCell id="X7GI3sgepbDjkfEGPn9F-29" parent="1" style="swimlane;whiteSpace=wrap" value="Notification" vertex="1">
           <mxGeometry height="1022" width="280" x="1030" y="148" as="geometry" />
         </mxCell>
-        <mxCell id="X7GI3sgepbDjkfEGPn9F-97" parent="X7GI3sgepbDjkfEGPn9F-29" style="" value="Send Assigned&#10;notification to&#10;the customer" vertex="1">
+        <mxCell id="X7GI3sgepbDjkfEGPn9F-97" parent="X7GI3sgepbDjkfEGPn9F-29" style="rounded=1;arcSize=30;whiteSpace=wrap;" value="Send Assigned&#10;notification to&#10;the customer" vertex="1">
           <mxGeometry height="50" width="110" x="110" y="872" as="geometry" />
         </mxCell>
-        <mxCell id="X7GI3sgepbDjkfEGPn9F-57" parent="X7GI3sgepbDjkfEGPn9F-29" style="" value="Send 1 summary&#10;notification&#10;to the staff" vertex="1">
+        <mxCell id="X7GI3sgepbDjkfEGPn9F-57" parent="X7GI3sgepbDjkfEGPn9F-29" style="rounded=1;arcSize=30;whiteSpace=wrap;" value="Send 1 summary&#10;notification&#10;to the staff" vertex="1">
           <mxGeometry height="50" width="124.5" x="40" y="592" as="geometry" />
         </mxCell>
         <mxCell id="X7GI3sgepbDjkfEGPn9F-73" parent="1" style="ellipse;shape=endState;fillColor=#000000;strokeColor=#ff0000" value="" vertex="1">
