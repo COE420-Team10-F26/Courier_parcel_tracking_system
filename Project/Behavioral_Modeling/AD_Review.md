@@ -107,9 +107,9 @@ Answers to the 12 review questions in the Lab 7 sheet, for each of the four acti
 
 | Diagram | Answer |
 | --- | --- |
-| AD UC-03 Book Parcel | _to be filled by Kevin_ |
-| AD UC-09 Assign Parcels to Field Staff | _to be filled by Kevin_ |
-| AD UC-16 Record Proof of Delivery | _to be filled by Kevin_ |
+| AD UC-03 Book Parcel | Yes. The order matches the Lab 6 UC-03 sequence diagram: validate, create the parcel, generate the tracking number, set Pending Pickup (history entry before the notification), calculate the delivery window, show the confirmation. `[invalid]` creates nothing, as in the `[else]` branch. The actions map to Lab 5 operations (`bookParcel()`, `isValidPhone()`, `generateTrackingNumber()`, `updateStatus()`, `getDeliveryWindowHours()`, `send()`). The sequence diagram's `[active delay alert]` check is not drawn, which is fine because it is always false for a new parcel. No problems found. |
+| AD UC-09 Assign Parcels to Field Staff | Yes. The order matches the Lab 6 UC-09 sequence diagram: view parcels and workload, select an active staff member, create and validate the assignment, confirm it, then per parcel set Assigned and run the status-change block (history, delay alert, customer notification). Then one summary notification goes to the staff member and the confirmation is shown. `[invalid]` does not confirm the assignment, as in the `[else]` branch. The actions map to Lab 5 operations (`assignParcels()`, `addParcel()`, `validateParcels()`, `confirmAssignment()`, `updateStatus()`, `buildSummary()`). No problems found. |
+| AD UC-16 Record Proof of Delivery | Yes. The order matches the Lab 6 UC-16 sequence diagram: pick the parcel, submit the proof, check the status, create and check the proof (`isComplete()`), set Delivered through UC-14 (`updateDeliveryStatus()`), then run the status-change block. An invalid status or an incomplete proof leaves the parcel unchanged, as in the two `[else]` branches. The actions map to Lab 5 operations of `FieldStaff`, `ProofOfDelivery` and `Parcel`. No problems found. |
 | AD UC-19 View Parcel Tracking History | _to be filled by Kevin_ |
 
 ## Q12. Are there any missing activities, unnecessary steps, contradictory paths, or unreachable actions?
