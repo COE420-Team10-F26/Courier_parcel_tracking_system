@@ -117,7 +117,7 @@ Answers to the 12 review questions in the Lab 7 sheet, for each of the four acti
 
 | Diagram | Answer |
 | --- | --- |
-| AD UC-03 Book Parcel | _to be filled by Kevin_ |
-| AD UC-09 Assign Parcels to Field Staff | _to be filled by Kevin_ |
-| AD UC-16 Record Proof of Delivery | _to be filled by Kevin_ |
+| AD UC-03 Book Parcel | No. Missing activities: none, as Q2 found no problems. Unnecessary steps: none, every action comes from FR-03, FR-04, FR-16 or FR-18. Contradictory paths: none, both decisions have complementary guards. Unreachable actions: none, every path ends at one of the two final nodes (Q3, Q7). |
+| AD UC-09 Assign Parcels to Field Staff | No, after a fix. Missing activities: Q2 found the notification note missing, and it is now on the diagram. Nothing else is missing. Unnecessary steps: none, every action comes from FR-08, FR-09, FR-16, FR-17 or FR-18. Contradictory paths: none, all guards are complementary (Q6). Unreachable actions: none, every path ends at one of the two final nodes (Q3, Q7). |
+| AD UC-16 Record Proof of Delivery | No. Missing activities: none, as Q2 found no problems. Unnecessary steps: none, every action comes from FR-12, FR-15, FR-16 or FR-18. Contradictory paths: none, all four decisions have complementary guards (Q6). Unreachable actions: none, every path ends at one of the three final nodes (Q3, Q7). |
 | AD UC-19 View Parcel Tracking History | _to be filled by Kevin_ |
