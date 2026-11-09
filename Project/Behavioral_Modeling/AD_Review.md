@@ -3,14 +3,14 @@
 Answers to the 12 review questions in the Lab 7 sheet, for each of the four activity diagrams. Each question has one owner, who fills in its table and commits it. If a check finds a problem, write what was found, and after the diagram owner fixes it, update the answer (for example: "found X, fixed Tuesday").
 
 ## Q1. Does each Activity Diagram correspond to one of the use cases selected in Lab 6?
-**Owner:** Kevin. Check against the Lab 6 sequence diagrams.
+**Owner:** Kevin. Check against the Lab 6 sequence diagrams. The corresponding sequence diagrams are placed within the report document under Documents/COE420_Lab6_Team10.docx
 
 | Diagram | Answer |
 | --- | --- |
-| AD UC-03 Book Parcel | _to be filled by Kevin_ |
-| AD UC-09 Assign Parcels to Field Staff | _to be filled by Kevin_ |
-| AD UC-16 Record Proof of Delivery | _to be filled by Kevin_ |
-| AD UC-19 View Parcel Tracking History | _to be filled by Kevin_ |
+| AD UC-03 Book Parcel | Yes. UC-03 Book Parcel is one of the four use cases selected in Lab 6 (Table 1.1, Customer as primary actor). It has its own sequence diagram (Figure 2.1), so the activity diagram models the same use case. |
+| AD UC-09 Assign Parcels to Field Staff | Yes. UC-09 Assign Parcels to Field Staff is one of the four selected use cases (Table 1.1, Admin as primary actor). It has its own sequence diagram (Figure 2.2), so the activity diagram models the same use case. |
+| AD UC-16 Record Proof of Delivery | Yes. UC-16 Record Proof of Delivery is one of the four selected use cases (Table 1.1, Field Staff as primary actor). It has its own sequence diagram (Figure 2.3), so the activity diagram models the same use case. |
+| AD UC-19 View Parcel Tracking History | Yes. UC-19 View Parcel Tracking History is one of the four selected use cases (Table 1.1, Customer as primary actor). It has its own sequence diagram (Figure 2.4), so the activity diagram models the same use case. |
 
 ## Q2. Is the workflow consistent with the relevant functional requirements and use case description?
 **Owner:** Sarhan. Check against the Lab 3 FRs, NFRs, use cases and scenarios, and the Lab 4 process rules.
