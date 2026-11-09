@@ -32,10 +32,10 @@ Each member fills in their own section below.
 ## UC-16 Record Proof of Delivery (Muhammad Hammad Khan, b00094579)
 - **Primary actor:** Field Staff
 - **Swimlanes:** Field Staff, System, Notification
-- **Main flow:** _to be filled by Mohammed_
-- **Decisions and guards:** _to be filled by Mohammed_
-- **Merges:** _to be filled by Mohammed_
-- **Forks and joins:** _to be filled by Mohammed_
+- **Main flow:** The System shows the staff member's assigned parcels and the Field Staff member selects one (FR-12, P4). The staff member enters the recipient's full name, signature and Emirates ID and submits them, and the System checks the parcel's status. If the parcel is Out for Delivery, or Delayed while Out for Delivery, the System creates the proof of delivery and checks that it is complete. If it is, the System sets the status to Delivered through updateDeliveryStatus (`<<include>>` UC-14, R-07), records the status history entry (FR-18) and resolves any active delay alert (Delayed row of the status table). The flow then forks: the Notification lane sends the Delivered notification to the customer (FR-16) while the System shows the confirmation and proof. After the join the flow ends.
+- **Decisions and guards:** After "Check parcel status": `[Out for Delivery, or Delayed while Out for Delivery]` continues, and `[any other status]` shows "parcel is not out for delivery" and ends, so no status step is skipped (P4). After "Check proof is complete": `[complete]` sets Delivered, and `[incomplete]` discards the proof and shows "proof incomplete" (FR-15). The staff member then chooses `[retry]`, back to entering the proof, or `[stop]`, which ends with the parcel keeping its status. After "Record status history entry": `[active delay alert]` resolves the alert and `[no active delay alert]` skips it.
+- **Merges:** Two merges. One before "Enter recipient name, signature and Emirates ID" joins "Select parcel" and the `[retry]` path. One after the delay-alert decision joins "Resolve delay alert" and the `[no active delay alert]` path.
+- **Forks and joins:** One fork after the delay-alert merge and one join before the final node. Sending the Delivered notification and showing the confirmation and proof run in parallel: send() hands the notification to the queue and returns at once (NFR-18, NFR-19), and both come after the history entry (P5 rule 5).
 - **Lab 6 sequence diagram:** `Sequence_Diagrams/SD_UC-16_Record_Proof_of_Delivery.png`
 - **Activity diagram:** `Activity_Diagrams/AD_UC-16_Record_Proof_of_Delivery.pdf`
 
