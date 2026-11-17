@@ -51,7 +51,7 @@ Besides the interfaces, CO3 has a plain dependency on CO1 (`FieldStaff` extends 
 | login | email: String, password: String | int | User.login() |
 | logout | userId: int | void | User.logout() |
 | changePassword | userId: int, oldPassword: String, newPassword: String | boolean | User.changePassword() |
-| getRole | userId: int | String | User (role) |
+| getRole | userId: int | String | User subclass (Customer, FieldStaff or Administrator) |
 | isTempPassword | userId: int | boolean | User (isTempPassword) |
 
 `login()` returns the logged-in user's `userId`, or 0 if the email or password is wrong, or the account is locked or deactivated, so the apps and other components can use the ID (rule 1). `getRole()` gives "Customer", "FieldStaff" or "Administrator" for routing to the right dashboard, and `isTempPassword()` tells the app to start UC-11.
