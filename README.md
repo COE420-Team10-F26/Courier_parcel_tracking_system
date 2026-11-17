@@ -27,7 +27,8 @@ A system that lets customers book and track parcels, admins assign parcels to fi
 | `Project/Behavioral_Modeling/Activity_Diagrams/` | Activity diagrams for UC-03, UC-09, UC-16 and UC-19 (PDF and .drawio) | Lab 7 |
 | `Project/Behavioral_Modeling/Selected_Workflows.md` | Workflow summary for each activity diagram: actor, swimlanes, main flow, decisions, merges, forks/joins and the matching sequence diagram | Lab 7 |
 | `Project/Behavioral_Modeling/AD_Review.md` | Answers to the Lab 7 review questions for the four activity diagrams | Lab 7 |
-| `Documents/` | Lab reports | Labs 3 to 7 |
+| `Project/Software_Architecture/` | Architectural design goals, style selection, component descriptions with interfaces, class distribution, and the UML component diagram (PDF and .drawio) | Lab 8 |
+| `Documents/` | Lab reports | Labs 3 to 8 |
 | `Source_Code/` | Implementation (later) | |
 
 - **Organization:** COE420-Team10-F26
